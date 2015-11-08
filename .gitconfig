@@ -1,0 +1,64 @@
+# vim: set filetype=gitconfig:
+[alias]
+    # Pretty log of the last 10 commits
+    l = log -10 --decorate --graph --oneline --pretty=format:'%C(yellow)[%h]%Creset%C(auto)%d%Creset - %C(blue)%cd%Creset by %C(green)<%ae>%Creset%n%s%n' --abbrev-commit
+
+[color]
+    ui = auto
+
+[color "branch"]
+    # Railscasts dark theme
+    current = green bold reverse
+    local = green bold
+    remote = blue
+    upstream = magenta
+
+    # Solarized theme
+    # current = green reverse
+    # local = green
+    # remote = blue
+    # upstream = magenta
+
+[color "diff"]
+    # Railscasts dark theme
+    meta = magenta bold
+    frag = yellow bold
+    old = red bold reverse
+    new = green bold reverse
+
+    # Solarized theme
+    # meta = magenta
+    # frag = black
+    # old = red reverse
+    # new = green reverse
+
+[color "status"]
+    # Railscasts dark theme
+    added = green bold ul
+    changed = yellow bold ul
+    untracked = magenta bold
+
+    # Solarized theme
+    # added = green ul
+    # changed = yellow ul
+    # untracked = magenta
+
+[core]
+    editor = vim
+    excludesfile = ~/.gitignore
+
+[diff]
+    tool = vimdiff
+
+[difftool]
+    prompt = false
+
+[merge]
+    tool = vimdiff
+
+[push]
+    default = simple
+
+[user]
+    email = daverivera90@gmail.com
+    name = Dave Rivera
