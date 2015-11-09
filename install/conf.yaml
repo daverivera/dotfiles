@@ -1,0 +1,39 @@
+- clean: ['~']
+
+- shell:
+    -
+        # WATCH OUT: ./scripts/update executes with $PWD equals to this dotfiles repo's root directory;
+        #            in this case, it is $HOME/dotfiles/
+        command: 'git submodule update --init --recursive --remote && ./install/update'
+        description: 'Fetching and updating submodules'
+
+- link:
+    # ZSH
+    ~/.zprofile: .zprofile
+    ~/.zshrc: .zshrc
+
+    # Oh-my-zsh
+    ~/.oh-my-zsh: .oh-my-zsh/
+
+    # Git
+    ~/.git: .gitconfig
+
+    # Vim
+    ~/.vim: .vim/
+    ~/.vimrc: .vimrc
+
+    # Nano
+    ~/.dircolors: .dircolors
+    ~/Configuracion: Configuracion/
+    ~/.nanorc: .nanorc
+
+    # Terminator
+    ~/.config/terminator: .config/terminator/
+
+- shell:
+    -
+        command: 'mkdir -p ~/.vim/backup ~/.vim/swap ~/.vim/undo'
+        description: 'Creating backup directories for Vim'
+    -
+        command: 'vim +PluginClean +PluginInstall +qall'
+        description: 'Installing Vim Vundle managed plugins'

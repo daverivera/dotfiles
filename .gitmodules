@@ -7,3 +7,8 @@
   path = .oh-my-zsh
   url = https://github.com/robbyrussell/oh-my-zsh.git
   ignore = dirty
+
+[submodule "dotfiles"]
+  path = dotfiles
+  url = https://github.com/anishathalye/dotbot.git
+  ignore = dirty
