@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
+echo "Installing dotfiles..."
+
 set -e
 
-CONFIG="$(pwd)/config.yaml"
+CONFIG="$(pwd)/conf.yaml"
 
 DOTBOT_DIR="dotbot"
 DOTBOT_BIN="bin/dotbot"
@@ -12,3 +14,5 @@ cd "${BASEDIR}"
 git submodule update --init --recursive "${DOTBOT_DIR}" > /dev/null 2>&1
 
 "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
+
+echo "Dotfiles installed!"
