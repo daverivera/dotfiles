@@ -11,6 +11,7 @@
     # ZSH
     ~/.zprofile: .zprofile
     ~/.zshrc: .zshrc
+    ~/.zsh_custom: .zsh_custom
 
     # Oh-my-zsh
     ~/.oh-my-zsh: .oh-my-zsh/
@@ -37,3 +38,6 @@
     -
         command: 'vim +PluginClean +PluginInstall +qall'
         description: 'Installing Vim Vundle managed plugins'
+    -
+        command: 'mkdir -p ~/.zsh_custom/themes'
+        description: 'Creating Oh My ZSH custom directory'
