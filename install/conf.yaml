@@ -1,37 +1,47 @@
 - clean: ['~']
 
-- shell:
-    -
-        # WATCH OUT: ./scripts/update executes with $PWD equals to this dotfiles repo's root directory;
-        #            in this case, it is $HOME/dotfiles/
-        command: 'git submodule update --init --recursive --remote && ./install/update'
-        description: 'Fetching and updating submodules'
-
 - link:
     # ZSH
-    ~/.zprofile: .zprofile
-    ~/.zshrc: zshrc
+    ~/.zprofile:
+        path: zprofile
+        force: true
+    ~/.zshrc:
+        path: zshrc
+        force: true
     ~/.zsh_custom: zsh_custom/
 
     # Oh-my-zsh
     ~/.oh-my-zsh: oh-my-zsh/
 
     # Git
-    ~/.git: gitconfig
+    ~/.gitconfig: gitconfig
 
     # Vim
-    ~/.vim: vim/
-    ~/.vimrc: vimrc
+    ~/.vim:
+        path: vim/
+        force: true
+    ~/.vimrc:
+        path: vimrc
+        force: true
 
     # Nano
     ~/.dircolors: dircolors
     ~/Configuracion: Configuracion/
-    ~/.nanorc: nanorc
+    ~/.nanorc:
+        path: nanorc
+        force: true
 
     # Terminator
-    ~/.config/terminator: config/terminator/
+    ~/.config/terminator:
+        path: config/terminator/
+        force: true
 
 - shell:
+    -
+        # WATCH OUT: ./scripts/update executes with $PWD equals to this dotfiles repo's root directory;
+        #            in this case, it is $HOME/dotfiles/
+        command: 'git submodule update --init --recursive --remote && ./install/update'
+        description: 'Fetching and updating submodules'
     -
         command: 'mkdir -p ~/.vim/backup ~/.vim/swap ~/.vim/undo'
         description: 'Creating backup directories for Vim'
