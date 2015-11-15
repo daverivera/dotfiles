@@ -14,3 +14,6 @@ set autoread
 
 " Enable file type detection
 filetype plugin indent on
+
+" Loads the file when has the focus
+au FocusGained,BufEnter * :silent! !
