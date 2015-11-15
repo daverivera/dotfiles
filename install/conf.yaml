@@ -10,26 +10,26 @@
 - link:
     # ZSH
     ~/.zprofile: .zprofile
-    ~/.zshrc: .zshrc
-    ~/.zsh_custom: .zsh_custom
+    ~/.zshrc: zshrc
+    ~/.zsh_custom: zsh_custom/
 
     # Oh-my-zsh
-    ~/.oh-my-zsh: .oh-my-zsh/
+    ~/.oh-my-zsh: oh-my-zsh/
 
     # Git
-    ~/.git: .gitconfig
+    ~/.git: gitconfig
 
     # Vim
-    ~/.vim: .vim/
-    ~/.vimrc: .vimrc
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
 
     # Nano
-    ~/.dircolors: .dircolors
+    ~/.dircolors: dircolors
     ~/Configuracion: Configuracion/
-    ~/.nanorc: .nanorc
+    ~/.nanorc: nanorc
 
     # Terminator
-    ~/.config/terminator: .config/terminator/
+    ~/.config/terminator: config/terminator/
 
 - shell:
     -
