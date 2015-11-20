@@ -13,6 +13,7 @@ set tabstop=2
 set autoread
 
 " Enable file type detection
+set autoindent
 filetype plugin indent on
 
 " Loads the file when has the focus
