@@ -14,7 +14,9 @@
     ~/.oh-my-zsh: oh-my-zsh/
 
     # Git
-    ~/.gitconfig: gitconfig
+    ~/.gitconfig:
+      path: gitconfig
+      force: true
 
     # Vim
     ~/.vim:
