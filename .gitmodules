@@ -1,10 +1,10 @@
 [submodule ".vim/bundle/Vundle.vim"]
-  path = .vim/bundle/Vundle.vim
+  path = vim/bundle/Vundle.vim
   url = https://github.com/gmarik/Vundle.vim.git
   ignore = dirty
 
 [submodule ".oh-my-zsh"]
-  path = .oh-my-zsh
+  path = oh-my-zsh
   url = https://github.com/robbyrussell/oh-my-zsh.git
   ignore = dirty
 
