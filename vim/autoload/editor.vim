@@ -18,3 +18,7 @@ filetype plugin indent on
 
 " Loads the file when has the focus
 au FocusGained,BufEnter * :silent! !
+
+" Split configuration
+set splitbelow
+set splitright
