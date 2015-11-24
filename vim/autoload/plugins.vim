@@ -34,6 +34,9 @@ Plugin 'jez/vim-c0'
 Plugin 'jez/vim-ispc'
 Plugin 'kchmck/vim-coffee-script'
 
+" ----- Emmet ---------------------------------------------------------
+Plugin 'mattn/emmet-vim'
+
 " ----- man pages, tmux -----------------------------------------------
 "Plugin 'christoomey/vim-tmux-navigator'
 
