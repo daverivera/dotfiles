@@ -37,6 +37,9 @@ Plugin 'kchmck/vim-coffee-script'
 " ----- Emmet ---------------------------------------------------------
 Plugin 'mattn/emmet-vim'
 
+" ---- Indentation lines ----------------------------------------------
+Plugin 'nathanaelkane/vim-indent-guides'
+
 " ----- man pages, tmux -----------------------------------------------
 "Plugin 'christoomey/vim-tmux-navigator'
 
