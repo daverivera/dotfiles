@@ -16,7 +16,6 @@ set history=1000
 set lazyredraw
 set modeline
 set noshowmode
-set paste
 set encoding=utf-8
 
 set backspace=indent,eol,start
@@ -40,4 +39,4 @@ syntax on
 source ~/.vim/autoload/editor.vim
 
 " --- Load custom key mappings ---
-" source ~/.vim/autoload/keymapping.vim
+source ~/.vim/autoload/keymapping.vim
