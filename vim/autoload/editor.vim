@@ -22,3 +22,9 @@ au FocusGained,BufEnter * :silent! !
 " Split configuration
 set splitbelow
 set splitright
+
+" Airline buffer tab support
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
