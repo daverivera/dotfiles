@@ -41,6 +41,9 @@ Plugin 'mattn/emmet-vim'
 " ---- Indentation lines ----------------------------------------------
 Plugin 'nathanaelkane/vim-indent-guides'
 
+" ---- Autocompletition -----------------------------------------------
+Plugin 'Valloric/YouCompleteMe'
+
 " ----- man pages, tmux -----------------------------------------------
 "Plugin 'christoomey/vim-tmux-navigator'
 
