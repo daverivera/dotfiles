@@ -2,3 +2,4 @@ vim/backup
 vim/bundle/**
 vim/swap
 vim/undo
+.DS_Store
