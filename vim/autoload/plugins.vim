@@ -30,6 +30,7 @@ Plugin 'tpope/vim-fugitive'
 
 " ----- Other text editing features -----------------------------------
 Plugin 'Raimondi/delimitMate'
+Plugin 'tpope/vim-surround'
 
 " ----- Syntax plugins ------------------------------------------------
 Plugin 'jez/vim-c0'
