@@ -11,6 +11,7 @@ set shiftwidth=2
 set softtabstop=2
 set tabstop=2
 set autoread
+set hidden
 set relativenumber
 
 " Enable file type detection
