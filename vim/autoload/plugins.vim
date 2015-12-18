@@ -41,7 +41,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'mattn/emmet-vim'
 
 " ---- Indentation lines ----------------------------------------------
-Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'Yggdroot/indentLine'
 
 " ---- Autocompletition -----------------------------------------------
 Plugin 'Valloric/YouCompleteMe'
@@ -124,4 +124,7 @@ hi clear SignColumn
 let g:airline#extensions#hunks#non_zero_only = 1
 
 " ----- CtrlP --------
-let g:ctrlp_working_path_mode = 'c'
+"let g:ctrlp_working_path_mode = 'c'
+
+" ----- Indent --------
+let g:indentLine_enabled = 1
