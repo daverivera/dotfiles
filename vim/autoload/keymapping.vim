@@ -8,5 +8,8 @@ inoremap kj <Esc>
 set pastetoggle=<leader>p
 " ----- Close a buffer
 nnoremap <C-c> :bp\|bd #<CR>
-" ----- Fast saving buffer
-nnoremap ,, :w <CR>
+" ----- fast saving buffer
+nnoremap ,, :w <cr>
+" ----- Change buffer
+nnoremap <leader>n :bn <CR>
+nnoremap <leader>m :bp <CR>
