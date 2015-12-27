@@ -1,10 +1,10 @@
 " ----- Tab behaviour -----
-set expandtab
-set shiftround
-set shiftwidth=2
+set expandtab " tab to spaces
+set shiftround " indent not rounded to shiftwidth
+set shiftwidth=2 " number of spaces to use for each step of (auto)indent
 set softtabstop=2
 set tabstop=2
-set autoread
+set autoread " reload file when changed outside vim
 set hidden
 set relativenumber
 
