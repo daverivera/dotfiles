@@ -39,7 +39,7 @@ Plugin 'jez/vim-ispc'
 Plugin 'kchmck/vim-coffee-script'
 
 " ----- Emmet ---------------------------------------------------------
-Plugin 'mattn/emmet-vim'
+"Plugin 'mattn/emmet-vim'
 
 " ---- Indentation lines ----------------------------------------------
 Plugin 'Yggdroot/indentLine'
@@ -49,24 +49,20 @@ Plugin 'Valloric/YouCompleteMe'
 
 " ----- man pages, tmux -----------------------------------------------
 "Plugin 'christoomey/vim-tmux-navigator'
-
-" ---- Extras/Advanced plugins ----------------------------------------
-" Highlight and strip trailing whitespace
-"Plugin 'ntpeters/vim-better-whitespace'
-" Easily surround chunks of text
-"Plugin 'tpope/vim-surround'
-" Align CSV files at commas, align Markdown tables, and more
-"Plugin 'godlygeek/tabular'
-" Automaticall insert the closing HTML tag
-"Plugin 'HTML-AutoCloseTag'
 " Make tmux look like vim-airline (read README for extra instructions)
 "Plugin 'edkolev/tmuxline.vim'
+
+" ---- Extras/Advanced plugins ----------------------------------------
+" Automaticall insert the closing HTML tag
+Plugin 'vim-scripts/HTML-AutoCloseTag'
+
+" Highlight and strip trailing whitespace
+"Plugin 'ntpeters/vim-better-whitespace'
 " All the other syntax plugins I use
 "Plugin 'ekalinin/Dockerfile.vim'
 "Plugin 'digitaltoad/vim-jade'
 "Plugin 'tpope/vim-liquid'
 "Plugin 'cakebaker/scss-syntax.vim'
-"Plugin 'bling/vim-airline'
 
 call vundle#end()
 
