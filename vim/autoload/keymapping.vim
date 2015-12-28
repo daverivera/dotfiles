@@ -9,7 +9,7 @@ set pastetoggle=<leader>p
 " ----- Close a buffer
 nnoremap <C-c> :bp\|bd #<CR>
 " ----- fast saving buffer
-nnoremap ,, :w <cr>
+nnoremap <leader>, :w <cr>
 " ----- Change buffer
 nnoremap <leader>n :bn <CR>
 nnoremap <leader>m :bp <CR>
