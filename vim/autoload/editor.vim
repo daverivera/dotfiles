@@ -19,6 +19,9 @@ set list
 " Highlight current line
 set cursorline
 
+" Yank and paste into clipboard
+set clipboard=unnamed
+
 " Split configuration
 set splitbelow
 set splitright
