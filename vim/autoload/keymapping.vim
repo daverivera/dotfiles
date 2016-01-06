@@ -13,3 +13,6 @@ nnoremap <leader>, :w <cr>
 " ----- Change buffer
 nnoremap <leader>n :bn <CR>
 nnoremap <leader>m :bp <CR>
+
+" ----- Fast copy pasta with line commenting
+map <leader>cp yy<leader>ccp
