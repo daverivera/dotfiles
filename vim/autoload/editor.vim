@@ -31,3 +31,12 @@ set splitright
 let g:airline#extensions#tabline#enabled = 1
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
+
+" vimdiff
+set diffopt+=vertical
+set diffopt+=filler
+set diffopt+=iwhite
+if &diff
+  highlight! link DiffText MatchParen
+endif
+

@@ -48,13 +48,13 @@
     excludesfile = ~/.gitignore
 
 [diff]
-    tool = vimdiff
+    tool = fugitive
 
 [difftool]
     prompt = false
 
 [merge]
-    tool = vimdiff
+    tool = fugitive
 
 [push]
     default = simple
@@ -62,9 +62,14 @@
 [user]
     email = daverivera90@gmail.com
     name = Dave Rivera
+
 [http]
-	sslVerify = false
+   sslVerify = false
+
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
+    clean = git-lfs clean %f
+    smudge = git-lfs smudge %f
+    required = true
+
+[mergetool "fugitive"]
+    cmd = vim -f -c \"Gdiff\" \"$MERGED\"
