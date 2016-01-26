@@ -16,3 +16,6 @@ nnoremap <leader>m :bp <CR>
 
 " ----- Fast copy pasta with line commenting
 map <leader>cp yy<leader>ccp
+
+" ----- Search the selection on visual
+vnoremap . y/<C-R>"<CR>
