@@ -79,6 +79,7 @@ let g:airline#extensions#tabline#enabled = 1
 " Open/close NERDTree Tabs with \t
 nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
 let g:nerdtree_tabs_open_on_console_startup = 0
+let g:NERDTreeIgnore=['node_modules']
 
 " ----- DelimitMate -----
 " Place cursor properly when hitting enter after braces
