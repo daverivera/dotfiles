@@ -26,6 +26,17 @@
         path: vimrc
         force: true
 
+    # Tmux
+    ~/.tmux.conf:
+        path: tmux/tmux
+        force: true
+    ~/.tmuxinator.zsh:
+        path: tmux/tmuxinator.zsh
+        force: true
+    ~/.tmuxinator:
+        path: tmux/tmuxinator/
+        force: true
+
     # Nano
     ~/.dircolors: dircolors
     ~/Configuracion: Configuracion/
