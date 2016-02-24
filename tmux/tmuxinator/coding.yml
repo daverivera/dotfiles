@@ -1,0 +1,9 @@
+name: coding
+root: ~/
+
+windows:
+  - editor:
+      layout: vertical-even
+      panes:
+        - #empty
+        - #empty
