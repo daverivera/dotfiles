@@ -32,7 +32,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'Raimondi/delimitMate'
 Plugin 'tpope/vim-surround'
 Plugin 'godlygeek/tabular'
-Plugin 'terryma/vim-multiple-cursors'
+"Plugin 'terryma/vim-multiple-cursors'
 
 " ----- Syntax plugins ------------------------------------------------
 Plugin 'jez/vim-c0'
@@ -48,14 +48,14 @@ Plugin 'Yggdroot/indentLine'
 " ---- Autocompletition -----------------------------------------------
 Plugin 'Valloric/YouCompleteMe'
 
-" ----- man pages, tmux -----------------------------------------------
-"Plugin 'christoomey/vim-tmux-navigator'
+" ----- tmux ----------------------------------------------------------
+Plugin 'christoomey/vim-tmux-navigator'
 " Make tmux look like vim-airline (read README for extra instructions)
-"Plugin 'edkolev/tmuxline.vim'
+Plugin 'edkolev/tmuxline.vim'
 
 " ---- Extras/Advanced plugins ----------------------------------------
 " Automaticall insert the closing HTML tag
-Plugin 'vim-scripts/HTML-AutoCloseTag'
+"Plugin 'vim-scripts/HTML-AutoCloseTag'
 
 " Highlight and strip trailing whitespace
 "Plugin 'ntpeters/vim-better-whitespace'
@@ -127,9 +127,3 @@ let g:airline#extensions#hunks#non_zero_only = 1
 
 " ----- Indent --------
 let g:indentLine_enabled = 1
-
-" ----- Multi cursor ------
-let g:multi_cursor_next_key='<C-n>'
-let g:multi_cursor_prev_key='<C-p>'
-let g:multi_cursor_skip_key='<C-u>'
-let g:multi_cursor_quit_key='<C-x>'

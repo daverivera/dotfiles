@@ -73,9 +73,6 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/java/bin:/opt/java/db/
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 alias open=nemo
-alias simurepo="cd /media/Datos/Software/Apache/UdeA/Simulacion"
-alias udea="cd /media/Datos/Dave/UdeA/Semestre\ 11/"
-export PATH=$PATH:/media/Datos/Software/IDE/adt-bundle-linux-x86_64-20140702/sdk/platform-tools:/media/Datos/Software/IDE/adt-bundle-linux-x86_64-20140702/sdk/tools:~/.composer/vendor/bin:$HOME/.npm/bin
 
 ## NPM set up
 #npm config set prefix ~/.npm

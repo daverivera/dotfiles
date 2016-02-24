@@ -21,3 +21,5 @@ map <leader>cp yy<leader>ccp
 vnoremap . y/<C-R>"<CR>
 
 noremap <leader>t :NERDTreeToggle<CR>
+
+vmap <F5> :sort u<CR>
