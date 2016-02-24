@@ -20,7 +20,10 @@ set list
 set cursorline
 
 " Yank and paste into clipboard
+" Mac
 set clipboard=unnamed
+" Linux
+set clipboard=unnamedplus
 
 " Split configuration
 set splitbelow
