@@ -23,3 +23,9 @@ vnoremap . y/<C-R>"<CR>
 noremap <leader>t :NERDTreeToggle<CR>
 
 vmap <F5> :sort u<CR>
+
+" Resize windows
+if bufwinnr(1)
+  map - 10<C-W><
+  map + 10<C-W>>
+endif
