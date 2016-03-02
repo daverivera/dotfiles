@@ -3,7 +3,7 @@ root: ~/
 
 windows:
   - editor:
-      layout: vertical-even
+      layout:56fe,193x52,0,0[193x39,0,0,0,193x12,0,40,1]
       panes:
         - #empty
         - #empty
