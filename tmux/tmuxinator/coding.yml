@@ -1,3 +1,4 @@
+# ~/.tmuxinator/coding.yml
 name: coding
 root: ~/
 
