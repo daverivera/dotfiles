@@ -21,7 +21,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'xolox/vim-misc'
 "Plugin 'xolox/vim-easytags'
 "Plugin 'majutsushi/tagbar'
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'bronson/vim-trailing-whitespace'
 
 " ----- Working with Git ----------------------------------------------
