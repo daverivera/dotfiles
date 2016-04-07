@@ -73,5 +73,6 @@
 
 [mergetool "fugitive"]
     cmd = vim -f -c \"Gdiff\" \"$MERGED\"
+
 [mergetool]
-	keepBackup = false
+    keepBackup = false
