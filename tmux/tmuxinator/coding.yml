@@ -1,4 +1,5 @@
 # ~/.tmuxinator/coding.yml
+tmux_options: -2
 
 name: coding
 root: ~/

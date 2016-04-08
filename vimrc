@@ -36,6 +36,7 @@ source ~/.vim/autoload/plugins.vim
 set background=dark
 set t_Co=256
 colorscheme Tomorrow-Night-Eighties
+set term=screen-256color
 syntax on
 
 " --- Load editor settings ---
