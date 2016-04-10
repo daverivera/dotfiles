@@ -19,8 +19,6 @@ set listchars=eol:¬,tab:→→
 set list
 
 " Yank and paste into clipboard
-" Mac
-set clipboard=unnamed
 " Linux
 set clipboard=unnamedplus
 
