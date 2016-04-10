@@ -7,6 +7,7 @@ set tabstop=2
 set autoread " reload file when changed outside vim
 set hidden
 set relativenumber
+set conceallevel=0
 
 " Enable file type detection
 set autoindent
