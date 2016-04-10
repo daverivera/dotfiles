@@ -1,15 +1,27 @@
 " ----- Re-Mapping leader
 let mapleader=","
 
-" ----- Escapping Insert
+" ----- Escaping Insert
 inoremap kj <Esc>
+
+" Deactivate Ex mode
+noremap Q <nop>
+
+" Disable arrow keys
+map <LEFT> <nop>
+map <RIGHT> <nop>
+map <UP> <nop>
+map <DOWN> <nop>
 
 " ----- Toggle paste mode
 set pastetoggle=<leader>p
+
 " ----- Close a buffer
 nnoremap <C-c> :bp\|bd #<CR>
-" ----- fast saving buffer
+
+" ----- Fast saving buffer
 nnoremap <leader>, :w <cr>
+
 " ----- Change buffer
 nnoremap <leader>n :bn <CR>
 nnoremap <leader>m :bp <CR>
@@ -20,11 +32,22 @@ map <leader>cp yy<leader>ccp
 " ----- Search the selection on visual
 vnoremap . y/<C-R>"<CR>
 
+" ----- Toggle NERDTree
 noremap <leader>t :NERDTreeToggle<CR>
 
+" ----- Alphabetizing
 vmap <F5> :sort u<CR>
 
-" Resize windows
+" Toggle search highlight
+nnoremap <silent> <leader>c :let @/=''<CR>
+
+" Changing windows layout
+noremap <C-j> <C-w>J
+noremap <C-j> <C-w>K
+noremap <C-h> <C-w>H
+noremap <c-l> <C-w>L
+
+" ----- Resize windows
 if bufwinnr(1)
   map - 10<C-W><
   map + 10<C-W>>
