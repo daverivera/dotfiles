@@ -5,81 +5,86 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+" Let Vundle manage itself
 Plugin 'gmarik/Vundle.vim'
 
-" ----- Making Vim look good ------------------------------------------
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'tomasr/molokai'
-Plugin 'bling/vim-airline'
-Plugin 'wavded/vim-stylus'
 
-" ----- Vim as a programmer's text editor -----------------------------
+" ----- Themes ------------------------------------------
+"Plugin 'altercation/vim-colors-solarized'
+"Plugin 'tomasr/molokai'
+
+
+" ----- Highlighting ------------------------------------------
+Plugin 'wavded/vim-stylus' "stylus
+Plugin 'kchmck/vim-coffee-script' " coffee
+"Plugin 'jez/vim-c0' " C0 highlighting
+"Plugin 'jez/vim-ispc' " ISPC highlighting
+
+
+" ----- Status bar ------------------------------------------
+Plugin 'bling/vim-airline'
+
+
+" ----- IDE features -----------------------------
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'scrooloose/syntastic'
-Plugin 'xolox/vim-misc'
+Plugin 'Yggdroot/indentLine' " show indentation lines
+Plugin 'Valloric/YouCompleteMe'
+"Plugin 'bronson/vim-trailing-whitespace'
+"Plugin 'jistr/vim-nerdtree-tabs'
+"Plugin 'xolox/vim-misc'
 "Plugin 'xolox/vim-easytags'
 "Plugin 'majutsushi/tagbar'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'bronson/vim-trailing-whitespace'
 
-" ----- Working with Git ----------------------------------------------
-Plugin 'airblade/vim-gitgutter'
+
+" ----- Fuzzy finder -----------------------------
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'FelikZ/ctrlp-py-matcher'
+Plugin 'rking/ag.vim'
+
+
+" ----- Git ----------------------------------------------
+Plugin 'airblade/vim-gitgutter' " show new/update/delete lines
 Plugin 'tpope/vim-fugitive'
 
-" ----- Other text editing features -----------------------------------
-Plugin 'Raimondi/delimitMate'
+
+" ----- Editor hacks -----------------------------------
+Plugin 'Raimondi/delimitMate' " closing quotes, brackets, etc
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat' " remmaping . to repeat all
 Plugin 'godlygeek/tabular'
-"Plugin 'terryma/vim-multiple-cursors'
+Plugin 'terryma/vim-multiple-cursors'
 
-" ----- Syntax plugins ------------------------------------------------
-Plugin 'jez/vim-c0'
-Plugin 'jez/vim-ispc'
-Plugin 'kchmck/vim-coffee-script'
-
-" ----- Emmet ---------------------------------------------------------
-"Plugin 'mattn/emmet-vim'
-
-" ---- Indentation lines ----------------------------------------------
-Plugin 'Yggdroot/indentLine'
-
-" ---- Autocompletition -----------------------------------------------
-Plugin 'Valloric/YouCompleteMe'
 
 " ----- tmux ----------------------------------------------------------
 Plugin 'christoomey/vim-tmux-navigator'
 " Make tmux look like vim-airline (read README for extra instructions)
 Plugin 'edkolev/tmuxline.vim'
 
-" ---- Extras/Advanced plugins ----------------------------------------
-" Automaticall insert the closing HTML tag
-"Plugin 'vim-scripts/HTML-AutoCloseTag'
-
-" Highlight and strip trailing whitespace
-"Plugin 'ntpeters/vim-better-whitespace'
-" All the other syntax plugins I use
-"Plugin 'ekalinin/Dockerfile.vim'
-"Plugin 'digitaltoad/vim-jade'
-"Plugin 'tpope/vim-liquid'
-"Plugin 'cakebaker/scss-syntax.vim'
 
 call vundle#end()
 
-" ----- Plugin-Specific Settings --------------------------------------
+
+
+
+" PLUGIN SPECIFIC SETTINGS
+
 
 " ----- Airline settings -----
 " Always show statusbar
 let g:airline_powerline_fonts = 1
 let g:airline_detect_paste=1
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 1 " airline buffer tab support
+let g:airline#extensions#tabline#fnamemod = ':t' " show just the filename
+
 
 " ----- NERDtree-tabs -----
 " Open/close NERDTree Tabs with \t
-nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
+"nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
 let g:nerdtree_tabs_open_on_console_startup = 0
 let g:NERDTreeIgnore=['node_modules']
+
 
 " ----- DelimitMate -----
 " Place cursor properly when hitting enter after braces
@@ -92,11 +97,6 @@ augroup mydelimitMate
   au FileType python let b:delimitMate_nesting_quotes = ['"', "'"]
 augroup END
 
-" ----- Tagbar -----
-" Open/close tagbar with \b
-nmap <silent> <leader>b :TagbarToggle<CR>
-" Uncomment to open tagbar automatically whenever possible
-"autocmd BufEnter * nested :call tagbar#autoopen(0)
 
 " ----- Syntastic -----
 let g:syntastic_error_symbol = '✘'
@@ -106,15 +106,6 @@ augroup mySyntastic
   au FileType tex let b:syntastic_mode = "passive"
 augroup END
 
-" ----- Easytags -----
-" Where to look for tags files
-set tags=./tags;,~/.vimtags
-" Sensible defaults
-let g:easytags_events = ['BufReadPost', 'BufWritePost']
-let g:easytags_async = 1
-let g:easytags_dynamic_files = 2
-let g:easytags_resolve_links = 1
-let g:easytags_suppress_ctags_warning = 1
 
 " ----- Gitgutter -----
 " Required after having changed the colorscheme
@@ -123,7 +114,19 @@ hi clear SignColumn
 let g:airline#extensions#hunks#non_zero_only = 1
 
 " ----- CtrlP --------
-"let g:ctrlp_working_path_mode = 'c'
+let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+"" Set delay to prevent extra search
+"let g:ctrlp_lazy_update = 350
+"" Do not clear filenames cache, to improve CtrlP startup
+"" You can manualy clear it by <F5>
+"let g:ctrlp_clear_cache_on_exit = 0
+"" Set no file limit, we are building a big project
+"let g:ctrlp_max_files = 0
+" If ag is available use it as filename list generator instead of 'find'
+"if executable("ag")
+    "set grepprg=ag\ --nogroup\ --nocolor
+    "let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --ignore ''.git'' --ignore ''.DS_Store'' --ignore ''node_modules'' --hidden -g ""'
+"endif
 
 " ----- Indent --------
 let g:indentLine_enabled = 1
