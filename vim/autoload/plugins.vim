@@ -114,6 +114,7 @@ hi clear SignColumn
 let g:airline#extensions#hunks#non_zero_only = 1
 
 " ----- CtrlP --------
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 "" Set delay to prevent extra search
 "let g:ctrlp_lazy_update = 350
