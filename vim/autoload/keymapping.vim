@@ -52,3 +52,6 @@ if bufwinnr(1)
   map - 10<C-W><
   map + 10<C-W>>
 endif
+
+" ----- Clear searches
+nnoremap <leader>c :let @/=''<CR>
