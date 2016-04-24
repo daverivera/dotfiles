@@ -20,7 +20,7 @@ set list
 
 " Yank and paste into clipboard
 " Linux
-set clipboard=unnamedplus
+" set clipboard=unnamedplus
 
 " Split configuration
 set splitbelow

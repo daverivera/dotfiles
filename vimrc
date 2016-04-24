@@ -40,3 +40,13 @@ source ~/.vim/autoload/editor.vim
 
 " --- Load custom key mappings ---
 source ~/.vim/autoload/keymapping.vim
+
+if has("mac")
+  source ~/.vim/autoload/mac/plugins.vim
+  source ~/.vim/autoload/mac/editor.vim
+  source ~/.vim/autoload/mac/keymapping.vim
+elseif has("unix")
+  source ~/.vim/autoload/linux/plugins.vim
+  source ~/.vim/autoload/linux/editor.vim
+  source ~/.vim/autoload/linux/keymapping.vim
+endif
