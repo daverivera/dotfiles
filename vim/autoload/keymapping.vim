@@ -57,4 +57,7 @@ endif
 nnoremap <leader>c :let @/=''<CR>
 
 " ----- Delete all
-" nnoremap da :1,$d<CR>
+nnoremap da :1,$d<CR>
+
+" ----- Emmet original mapping
+imap <C-e> <C-y>,

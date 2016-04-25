@@ -38,6 +38,10 @@ Plugin 'Valloric/YouCompleteMe'
 "Plugin 'majutsushi/tagbar'
 
 
+" ----- Emmet ----------------------------------------------
+Plugin 'mattn/emmet-vim'
+
+
 " ----- Fuzzy finder -----------------------------
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'FelikZ/ctrlp-py-matcher'
