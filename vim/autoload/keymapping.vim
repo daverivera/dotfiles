@@ -42,10 +42,10 @@ vmap <F5> :sort u<CR>
 nnoremap <silent> <leader>c :let @/=''<CR>
 
 " Changing windows layout
-noremap <C-j> <C-w>J
-noremap <C-j> <C-w>K
-noremap <C-h> <C-w>H
-noremap <c-l> <C-w>L
+noremap <C-j> <C-w>j
+noremap <C-j> <C-w>k
+noremap <C-h> <C-w>h
+noremap <c-l> <C-w>l
 
 " ----- Resize windows
 if bufwinnr(1)
