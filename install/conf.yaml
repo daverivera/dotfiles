@@ -2,9 +2,6 @@
 
 - link:
     # ZSH
-    ~/.zprofile:
-        path: zprofile
-        force: true
     ~/.zshrc:
         path: zshrc
         force: true
