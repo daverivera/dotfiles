@@ -41,6 +41,12 @@ vmap <F5> :sort u<CR>
 " Toggle search highlight
 nnoremap <silent> <leader>c :let @/=''<CR>
 
+" Changing windows layout
+noremap <C-j> <C-w>J
+noremap <C-j> <C-w>K
+noremap <C-h> <C-w>H
+noremap <c-l> <C-w>L
+
 " ----- Resize windows
 if bufwinnr(1)
   map - 10<C-W><
