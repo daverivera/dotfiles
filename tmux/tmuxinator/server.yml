@@ -1,0 +1,20 @@
+# ~/.tmuxinator/server.yml
+name: server
+root: ~/Projects/WebStorm/exposure-manager
+
+#pre: postgres -D /usr/local/var/postgres & git pull & mvn clean && mvn clean install -Dmaven.test.skip=true && java -jar exposure-store/target/exposure-store-*.jar com.rms.exposurestore.ExposureStore seed-exposure && cd accumulation-engine && ./seed-raps.sh && cd ..
+pre: postgres -D /usr/local/var/postgres & git status
+
+windows:
+  - expman:
+      layout: fe08,272x62,0,0{136x62,0,0[136x31,0,0,6,136x30,0,32,5],135x62,137,0,3}
+      panes:
+        - rest:
+          - cd rest-service
+          - mvn exec:java
+        - accumulation:
+          - cd accumulation-engine
+          - mvn exec:java
+        - asf:
+          - cd ~/Projects/WebStorm/rms-one-app/
+          - asf serve --component-environment=test
