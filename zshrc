@@ -15,7 +15,7 @@ source $ZSH/oh-my-zsh.sh
 
 case "$OSTYPE" in
   "linux-gnu")
-    path=(/usr/local/sbin /usr/local/bin /usr/bin /opt/java/bin /opt/java/db/bin /opt/java/jre/bin /usr/bin/core_perl $HOME/.rbenv/bin $path)
+    path=(~/.nvm/versions/node/v4.2.6/bin /usr/local/sbin /usr/local/bin /usr/bin /opt/java/bin /opt/java/db/bin /opt/java/jre/bin /usr/bin/core_perl $HOME/.rbenv/bin $path)
     alias open=nemo
 
     # Rbenv

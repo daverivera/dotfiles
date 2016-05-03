@@ -1,0 +1,9 @@
+# ~/.tmuxinator/music.yml
+
+name: music
+root: /Users/Shared/untitled folder
+
+windows:
+  - music:
+      panes:
+        - cmus
