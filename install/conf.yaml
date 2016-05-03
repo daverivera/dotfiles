@@ -37,13 +37,6 @@
         path: tmux/tmuxinator/
         force: true
 
-    # Nano
-    ~/.dircolors: dircolors
-    ~/Configuracion: Configuracion/
-    ~/.nanorc:
-        path: nanorc
-        force: true
-
     # Terminator
     ~/.config/terminator:
         path: config/terminator/
