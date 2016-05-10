@@ -2,8 +2,9 @@
 name: server
 root: ~/Projects/WebStorm/exposure-manager
 
-#pre: postgres -D /usr/local/var/postgres & git pull & mvn clean && mvn clean install -Dmaven.test.skip=true && java -jar exposure-store/target/exposure-store-*.jar com.rms.exposurestore.ExposureStore seed-exposure && cd accumulation-engine && ./seed-raps.sh && cd ..
-pre: postgres -D /usr/local/var/postgres & git status
+pre: postgres -D /usr/local/var/postgres & git pull && mvn clean && mvn clean install -Dmaven.test.skip=true && java -cp exposure-store/target/exposure-store-*.jar com.rms.exposurestore.ExposureStore seed-exposure 2> /dev/null && cd accumulation-engine && ./seed-raps.sh && cd ..
+
+#pre: postgres -D /usr/local/var/postgres & git status
 
 windows:
   - expman:
