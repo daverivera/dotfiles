@@ -5,9 +5,6 @@
     ~/.zshrc:
         path: zshrc
         force: true
-    ~/.zshenv:
-        path: zshenv
-        force: true
     ~/.zsh_custom: zsh_custom/
 
     # Oh-my-zsh

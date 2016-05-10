@@ -1,3 +1,9 @@
+export ZSH=$HOME/.oh-my-zsh
+
+export EDITOR=vim
+
+export NVM_DIR=~/.nvm
+
 # Set name of the theme to load.
 ZSH_THEME="amuse"
 
