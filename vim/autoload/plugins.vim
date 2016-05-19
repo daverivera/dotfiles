@@ -42,12 +42,6 @@ Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'mattn/emmet-vim'
 
 
-" ----- TypeScript ----------------------------------------------
-Plugin 'leafgarland/typescript-vim'
-Plugin 'HerringtonDarkholme/yats.vim'
-Plugin 'Quramy/tsuquyomi'
-
-
 " ----- Fuzzy finder -----------------------------
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'FelikZ/ctrlp-py-matcher'
