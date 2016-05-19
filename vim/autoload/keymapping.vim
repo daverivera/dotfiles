@@ -61,3 +61,6 @@ nnoremap da :1,$d<CR>
 
 " ----- Emmet original mapping
 imap <C-e> <C-y>,
+
+nnoremap <leader>e :e $MYVIMRC<CR>
+nnoremap <leader>r :so $MYVIMRC<CR>
