@@ -17,14 +17,14 @@ map <DOWN> <nop>
 set pastetoggle=<leader>p
 
 " ----- Close a buffer
-nnoremap <C-c> :bp\|bd #<CR>
+nnoremap <silent><C-c> :bp\|bd #<CR>
 
 " ----- Fast saving buffer
-nnoremap <leader>, :w <cr>
+nnoremap <leader>, :w<CR>
 
 " ----- Change buffer
-nnoremap <leader>n :bn <CR>
-nnoremap <leader>m :bp <CR>
+nnoremap <leader>n :bn<CR>
+nnoremap <leader>m :bp<CR>
 
 " ----- Fast copy pasta with line commenting
 map <leader>cp yy<leader>ccp
@@ -42,10 +42,10 @@ vmap <F5> :sort u<CR>
 nnoremap <silent> <leader>c :let @/=''<CR>
 
 " Changing windows layout
-" noremap <C-j> <C-w>J
-" noremap <C-j> <C-w>K
-" noremap <C-h> <C-w>H
-" noremap <c-l> <C-w>L
+"noremap <C-j> <C-w>j
+"noremap <C-j> <C-w>k
+"noremap <C-h> <C-w>h
+"noremap <c-l> <C-w>l
 
 " ----- Resize windows
 if bufwinnr(1)
@@ -62,5 +62,14 @@ nnoremap da :1,$d<CR>
 " ----- Emmet original mapping
 imap <C-e> <C-y>,
 
+" ----- Handle VimRC
 nnoremap <leader>e :e $MYVIMRC<CR>
 nnoremap <leader>r :so $MYVIMRC<CR>
+
+" ----- Center search results
+nnoremap n nzz
+nnoremap N Nzz
+nnoremap * *zz
+nnoremap # #zz
+nnoremap g* g*zz
+nnoremap g# g#zz
