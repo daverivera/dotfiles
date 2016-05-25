@@ -42,10 +42,10 @@ vmap <F5> :sort u<CR>
 nnoremap <silent> <leader>c :let @/=''<CR>
 
 " Changing windows layout
-noremap <C-j> <C-w>j
-noremap <C-j> <C-w>k
-noremap <C-h> <C-w>h
-noremap <c-l> <C-w>l
+"noremap <C-j> <C-w>j
+"noremap <C-j> <C-w>k
+"noremap <C-h> <C-w>h
+"noremap <c-l> <C-w>l
 
 " ----- Resize windows
 if bufwinnr(1)
@@ -73,3 +73,6 @@ nnoremap * *zz
 nnoremap # #zz
 nnoremap g* g*zz
 nnoremap g# g#zz
+
+" ----- Format json
+nmap =j :%!python -m json.tool <CR>
