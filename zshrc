@@ -16,12 +16,15 @@ nvm use stable
 
 case "$OSTYPE" in
   "linux-gnu")
-    path=(~/.nvm/versions/node/v4.2.6/bin /usr/local/sbin /usr/local/bin /usr/bin /opt/java/bin /opt/java/db/bin /opt/java/jre/bin /usr/bin/core_perl $HOME/.rbenv/bin $path)
+    path=(~/.nvm/versions/node/v4.2.6/bin /usr/local/sbin /usr/local/bin /usr/bin /opt/java/bin /opt/java/db/bin /opt/java/jre/bin /usr/bin/core_perl $HOME/.rbenv/versions/2.2.2/bin $path)
     alias open=nemo
 
+    # RVM (Ruby)
+    [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
     # Rbenv
-    if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-    eval "$(rbenv init -)"
+    #if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+    #eval "$(rbenv init -)"
     ;;
 
   "darwin"*)
@@ -38,3 +41,5 @@ esac
 
 # Add all --untracked and commit
 alias gaac='gaa && gc'
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
