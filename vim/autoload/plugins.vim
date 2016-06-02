@@ -105,6 +105,10 @@ let g:nerdtree_tabs_open_on_console_startup = 0
 let g:NERDTreeIgnore=['node_modules']
 
 
+" ----- NERD Commenter -----
+let g:NERDSpaceDelims = 1 " add a space after delimiter
+
+
 " ----- DelimitMate -----
 " Place cursor properly when hitting enter after braces
 let delimitMate_expand_cr = 1
