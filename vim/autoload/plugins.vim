@@ -21,6 +21,10 @@ Plugin 'kchmck/vim-coffee-script' " coffee
 "Plugin 'jez/vim-ispc' " ISPC highlighting
 
 
+" ----- React / Redux ------------------------------------------
+Plugin 'mxw/vim-jsx' "JSX syntax highlight
+
+
 " ----- Status bar ------------------------------------------
 Plugin 'bling/vim-airline'
 
@@ -158,3 +162,7 @@ let g:ycm_semantic_triggers['typescript'] = ['.']
 
 " ----- Multiple Cursors --------
 "let g:multi_cursor_quit_key='kj'
+
+
+" ----- React / Redux --------
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
