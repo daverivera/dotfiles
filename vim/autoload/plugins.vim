@@ -58,10 +58,10 @@ Plugin 'tpope/vim-fugitive'
 
 
 " ----- TypeScript ----------------------------------------------
-Plugin 'leafgarland/typescript-vim'
-Plugin 'HerringtonDarkholme/yats.vim'
-Plugin 'Quramy/tsuquyomi'
-Plugin 'Shougo/vimproc.vim'
+"Plugin 'leafgarland/typescript-vim'
+"Plugin 'HerringtonDarkholme/yats.vim'
+"Plugin 'Quramy/tsuquyomi'
+"Plugin 'Shougo/vimproc.vim'
 
 
 " ----- Editor hacks -----------------------------------
@@ -132,6 +132,7 @@ hi clear SignColumn
 " In vim-airline, only display "hunks" if the diff is non-zero
 let g:airline#extensions#hunks#non_zero_only = 1
 
+
 " ----- CtrlP --------
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
@@ -154,14 +155,14 @@ let g:indentLine_enabled = 1
 
 
 " ----- TypeScript YouCompleteMe --------
-if !exists("g:ycm_semantic_triggers")
-  let g:ycm_semantic_triggers = {}
-endif
-let g:ycm_semantic_triggers['typescript'] = ['.']
+"if !exists("g:ycm_semantic_triggers")
+  "let g:ycm_semantic_triggers = {}
+"endif
+"let g:ycm_semantic_triggers['typescript'] = ['.']
 
 
 " ----- Multiple Cursors --------
-"let g:multi_cursor_quit_key='kj'
+"let g:multi_cursor_quit_key='Q'
 
 
 " ----- React / Redux --------
