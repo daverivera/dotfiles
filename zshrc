@@ -26,8 +26,7 @@ case "$OSTYPE" in
     path=(~/.nvm/versions/node/v4.2.6/bin /usr/local/sbin /usr/local/bin /usr/bin /opt/java/bin /opt/java/db/bin /opt/java/jre/bin /usr/bin/core_perl $path)
     alias open=nemo
 
-    # # RVM (Ruby)
-    # [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+    alias xclip='xclip -selection clipboard'
 
     ;;
 
@@ -45,5 +44,3 @@ esac
 
 # Add all --untracked and commit
 alias gaac='gaa && gc'
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
