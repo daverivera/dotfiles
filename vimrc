@@ -46,6 +46,7 @@ if has("mac")
   source ~/.vim/autoload/mac/editor.vim
   source ~/.vim/autoload/mac/keymapping.vim
 elseif has("unix")
+  let g:syntastic_javascript_checkers = ['eslint']
   source ~/.vim/autoload/linux/plugins.vim
   source ~/.vim/autoload/linux/editor.vim
   source ~/.vim/autoload/linux/keymapping.vim
@@ -56,3 +57,5 @@ if !exists("g:ycm_semantic_triggers")
   let g:ycm_semantic_triggers = {}
 endif
 let g:ycm_semantic_triggers['typescript'] = ['.']
+
+set conceallevel=0
