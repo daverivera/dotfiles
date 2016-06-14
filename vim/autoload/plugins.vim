@@ -22,7 +22,7 @@ Plugin 'kchmck/vim-coffee-script' " coffee
 
 
 " ----- React / Redux ------------------------------------------
-Plugin 'mxw/vim-jsx' "JSX syntax highlight
+" Plugin 'mxw/vim-jsx' "JSX syntax highlight
 
 
 " ----- Status bar ------------------------------------------
@@ -170,4 +170,4 @@ let g:indentLine_enabled = 1
 
 
 " ----- React / Redux --------
-let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+" let g:jsx_ext_required = 0 " Allow JSX in normal JS files
