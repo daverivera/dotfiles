@@ -44,3 +44,17 @@ esac
 
 # Add all --untracked and commit
 alias gaac='gaa && gc'
+alias gstas='git stash save'
+alias gstd='gstl'
+
+
+# VIm mode on zsh
+#bindkey -v
+#autoload -U up-line-or-beginning-search
+#autoload -U down-line-or-beginning-search
+#zle -N up-line-or-beginning-search
+#zle -N down-line-or-beginning-search
+
+bindkey -v
+bindkey "^[OA" up-line-or-beginning-search
+bindkey "^[OB" down-line-or-beginning-search

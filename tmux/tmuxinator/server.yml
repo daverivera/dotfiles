@@ -2,13 +2,13 @@
 name: server
 root: ~/Projects/WebStorm/exposure-manager
 
-pre: postgres -D /usr/local/var/postgres & git pull && mvn clean && mvn clean install -Dmaven.test.skip=true && java -cp exposure-store/target/exposure-store-*.jar com.rms.exposurestore.ExposureStore seed-exposure 2> /dev/null && cd accumulation-engine && ./seed-raps.sh && cd ..
+#pre: postgres -D /usr/local/var/postgres & git pull && mvn clean && mvn clean install -Dmaven.test.skip=true && java -cp exposure-store/target/exposure-store-0.1.*-SNAPSHOT.jar com.rms.exposurestore.ExposureStore jdbc_url=localhost/EXM user=postgres pwd=admin seed-exposure && cd accumulation-engine && ./seed-raps.sh && cd ..
 
-#pre: postgres -D /usr/local/var/postgres & git status
+pre: postgres -D /usr/local/var/postgres & git status
 
 windows:
   - expman:
-      layout: fe08,272x62,0,0{136x62,0,0[136x31,0,0,6,136x30,0,32,5],135x62,137,0,3}
+      layout: 9e4e,272x62,0,0{136x62,0,0[136x21,0,0,5,136x20,0,22,6,136x19,0,43,8],135x62,137,0,7}
       panes:
         - rest:
           - cd rest-service
@@ -16,6 +16,13 @@ windows:
         - accumulation:
           - cd accumulation-engine
           - mvn exec:java
+        - iamAuth:
+          - cd ~/Projects/WebStorm/rms-one-iam
+          - git pull
+          - npm install
+          - NODE_ENV=development PORT=4000 npm start
         - asf:
           - cd ~/Projects/WebStorm/rms-one-app/
+          - asf clean
+          - asf install
           - asf serve --component-environment=test

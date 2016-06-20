@@ -27,6 +27,7 @@ Plugin 'kchmck/vim-coffee-script' " coffee
 
 " ----- Status bar ------------------------------------------
 Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 
 " ----- IDE features -----------------------------
