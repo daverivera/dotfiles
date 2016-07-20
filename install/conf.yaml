@@ -44,6 +44,12 @@
         path: Xresources
         force: true
 
+    # i3wm
+    ~/.config/i3/config:
+        path: config/i3/config
+        force: true
+
+
 - shell:
     -
         # WATCH OUT: ./scripts/update executes with $PWD equals to this dotfiles repo's root directory;
