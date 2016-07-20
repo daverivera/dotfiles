@@ -1,0 +1,7 @@
+URxvt*background: Black
+URxvt*foreground: White
+URxvt.keysym.C-M-c: builtin-string:
+URxvt.keysym.C-M-v: builtin-string:
+URxvt.perl-ext-common: selection-to-clipboard
+URxvt.scrollBar: false
+URxvt.font: xft:dejavu sans mono:size=9

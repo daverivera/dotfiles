@@ -35,8 +35,13 @@
         force: true
 
     # Terminator
-    ~/.config/terminator:
-        path: config/terminator/
+    # ~/.config/terminator:
+        # path: config/terminator/
+        # force: true
+
+    # urxvt
+    ~/.Xresources:
+        path: Xresources
         force: true
 
 - shell:
