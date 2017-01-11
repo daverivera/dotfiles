@@ -37,6 +37,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'Yggdroot/indentLine' " show indentation lines
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'editorconfig/editorconfig-vim'
 "Plugin 'jistr/vim-nerdtree-tabs'
 "Plugin 'xolox/vim-misc'
 "Plugin 'xolox/vim-easytags'
