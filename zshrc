@@ -58,3 +58,4 @@ alias gstd='gstl'
 bindkey -v
 bindkey "^[OA" up-line-or-beginning-search
 bindkey "^[OB" down-line-or-beginning-search
+stty -ixon
