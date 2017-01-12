@@ -52,10 +52,4 @@ elseif has("unix")
   source ~/.vim/autoload/linux/keymapping.vim
 endif
 
-" TypeScript YouCompleteMe
-if !exists("g:ycm_semantic_triggers")
-  let g:ycm_semantic_triggers = {}
-endif
-let g:ycm_semantic_triggers['typescript'] = ['.']
-
 set conceallevel=0

@@ -60,10 +60,10 @@ Plugin 'tpope/vim-fugitive'
 
 
 " ----- TypeScript ----------------------------------------------
-"Plugin 'leafgarland/typescript-vim'
-"Plugin 'HerringtonDarkholme/yats.vim'
-"Plugin 'Quramy/tsuquyomi'
-"Plugin 'Shougo/vimproc.vim'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'HerringtonDarkholme/yats.vim'
+Plugin 'Quramy/tsuquyomi'
+Plugin 'Shougo/vimproc.vim'
 
 
 " ----- Editor hacks -----------------------------------
@@ -161,10 +161,10 @@ let g:indentLine_enabled = 1
 
 
 " ----- TypeScript YouCompleteMe --------
-"if !exists("g:ycm_semantic_triggers")
-  "let g:ycm_semantic_triggers = {}
-"endif
-"let g:ycm_semantic_triggers['typescript'] = ['.']
+if !exists("g:ycm_semantic_triggers")
+  let g:ycm_semantic_triggers = {}
+endif
+let g:ycm_semantic_triggers['typescript'] = ['.']
 
 
 " ----- Multiple Cursors --------
