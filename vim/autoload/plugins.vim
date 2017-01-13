@@ -44,6 +44,13 @@ Plugin 'editorconfig/editorconfig-vim'
 "Plugin 'majutsushi/tagbar'
 
 
+" ----- Snippets -----------------------------
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
+
+
 " ----- Emmet ----------------------------------------------
 Plugin 'mattn/emmet-vim'
 
@@ -59,11 +66,19 @@ Plugin 'airblade/vim-gitgutter' " show new/update/delete lines
 Plugin 'tpope/vim-fugitive'
 
 
+" ----- JavaScript ----------------------------------------------
+Plugin 'ternjs/tern_for_vim'
+Plugin 'othree/es.next.syntax.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'othree/javascript-libraries-syntax.vim'
+
+
 " ----- TypeScript ----------------------------------------------
 Plugin 'leafgarland/typescript-vim'
 Plugin 'HerringtonDarkholme/yats.vim'
 Plugin 'Quramy/tsuquyomi'
 Plugin 'Shougo/vimproc.vim'
+Plugin 'vim-js-pretty-template'
 
 
 " ----- Editor hacks -----------------------------------
@@ -131,6 +146,8 @@ augroup mySyntastic
   au FileType tex let b:syntastic_mode = "passive"
 augroup END
 
+let g:syntastic_typescript_checkers = ['tslint', 'tsc']
+
 
 " ----- Gitgutter -----
 " Required after having changed the colorscheme
@@ -166,6 +183,14 @@ if !exists("g:ycm_semantic_triggers")
 endif
 let g:ycm_semantic_triggers['typescript'] = ['.']
 
+
+" ----- JS-Pretty Template  --------
+autocmd FileType typescript JsPreTmpl html
+autocmd FileType typescript syn clear foldBraces
+
+
+" ----- JavaScript libraries syntax --------
+let g:used_javascript_libs = 'lodash,chai'
 
 " ----- Multiple Cursors --------
 "let g:multi_cursor_quit_key='Q'
