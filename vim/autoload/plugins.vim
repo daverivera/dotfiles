@@ -17,6 +17,7 @@ Plugin 'gmarik/Vundle.vim'
 " ----- Highlighting ------------------------------------------
 Plugin 'wavded/vim-stylus' "stylus
 Plugin 'kchmck/vim-coffee-script' " coffee
+Plugin 'evidens/vim-twig' " twig
 "Plugin 'jez/vim-c0' " C0 highlighting
 "Plugin 'jez/vim-ispc' " ISPC highlighting
 
@@ -67,7 +68,7 @@ Plugin 'tpope/vim-fugitive'
 
 
 " ----- JavaScript ----------------------------------------------
-Plugin 'ternjs/tern_for_vim'
+" Plugin 'ternjs/tern_for_vim'
 Plugin 'othree/es.next.syntax.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'othree/javascript-libraries-syntax.vim'
@@ -79,6 +80,12 @@ Plugin 'HerringtonDarkholme/yats.vim'
 Plugin 'Quramy/tsuquyomi'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'vim-js-pretty-template'
+
+
+" ----- Ruby ----------------------------------------------
+" Plugin 'vim-ruby/vim-ruby'
+" Plugin 'tpope/vim-rails'
+" Plugin 'tpope/vim-bundler'
 
 
 " ----- Editor hacks -----------------------------------
@@ -160,17 +167,17 @@ let g:airline#extensions#hunks#non_zero_only = 1
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 " If ag is available use it as filename list generator instead of 'find'
-"if executable("ag")
-    "set grepprg=ag\ --nogroup\ --nocolor
-    "let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --ignore ''.git'' --ignore ''.DS_Store'' --ignore ''node_modules'' --hidden -g ""'
-"endif
-"" Set delay to prevent extra search
-"let g:ctrlp_lazy_update = 350
-"" Do not clear filenames cache, to improve CtrlP startup
-"" You can manualy clear it by <F5>
-"let g:ctrlp_clear_cache_on_exit = 0
-"" Set no file limit, we are building a big project
-"let g:ctrlp_max_files = 0
+if executable("ag")
+    set grepprg=ag\ --nogroup\ --nocolor
+    let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --ignore ''.git'' --ignore ''.DS_Store'' --ignore ''node_modules'' --hidden -g ""'
+endif
+" Set delay to prevent extra search
+" let g:ctrlp_lazy_update = 350
+" Do not clear filenames cache, to improve CtrlP startup
+" You can manualy clear it by <F5>
+" let g:ctrlp_clear_cache_on_exit = 0
+" Set no file limit, we are building a big project
+" let g:ctrlp_max_files = 0
 
 
 " ----- Indent --------

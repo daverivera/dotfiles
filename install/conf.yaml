@@ -34,20 +34,20 @@
         path: tmux/tmuxinator/
         force: true
 
-    # Terminator
-    # ~/.config/terminator:
-        # path: config/terminator/
-        # force: true
+    # Javascript
+    ~/.tern-config.conf:
+        path: tern-config
+        force: true
 
     # urxvt
-    ~/.Xresources:
-        path: Xresources
-        force: true
+    #~/.Xresources:
+    #    path: Xresources
+    #    force: true
 
     # i3wm
-    ~/.config/i3/config:
-        path: config/i3/config
-        force: true
+    #~/.config/i3/config:
+    #    path: config/i3/config
+    #    force: true
 
 
 - shell:

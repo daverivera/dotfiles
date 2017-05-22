@@ -23,7 +23,7 @@ nvm use 7.3
 
 case "$OSTYPE" in
   "linux-gnu")
-    path=(~/.nvm/versions/node/v4.2.6/bin /usr/local/sbin /usr/local/bin /usr/bin /opt/java/bin /opt/java/db/bin /opt/java/jre/bin /usr/bin/core_perl $path)
+    path=(~/.nvm/versions/node/v7.3.0/bin /usr/local/sbin /usr/local/bin /usr/bin /opt/java/bin /opt/java/db/bin /opt/java/jre/bin /usr/bin/core_perl ~/.gem/ruby/2.4.0/bin $path)
     alias open=nemo
 
     alias xclip='xclip -selection clipboard'
@@ -63,3 +63,5 @@ stty -ixon
 # bindkey "^[[B" history-beginning-search-forward
 
 alias mux='tmuxinator'
+
+export PATH="$HOME/.yarn/bin:$PATH"
