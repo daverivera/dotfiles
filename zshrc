@@ -18,7 +18,7 @@ source $ZSH/oh-my-zsh.sh
 
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 # nvm alias stable 4.2.6
-nvm use 7.3
+nvm use 9.2.0
 
 
 case "$OSTYPE" in
@@ -65,3 +65,4 @@ stty -ixon
 alias mux='tmuxinator'
 
 export PATH="$HOME/.yarn/bin:$PATH"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
