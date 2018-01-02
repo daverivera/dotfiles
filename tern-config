@@ -7,7 +7,9 @@
     "libs": [
         "browser",
         "ecma5",
-        "ecma6"
+        "ecma6",
+        "react",
+        "immutable"
     ],
     "ecmaVersion": 6
 }

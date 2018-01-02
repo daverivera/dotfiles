@@ -15,15 +15,11 @@ Plugin 'gmarik/Vundle.vim'
 
 
 " ----- Highlighting ------------------------------------------
-Plugin 'wavded/vim-stylus' "stylus
-Plugin 'kchmck/vim-coffee-script' " coffee
-Plugin 'evidens/vim-twig' " twig
-"Plugin 'jez/vim-c0' " C0 highlighting
-"Plugin 'jez/vim-ispc' " ISPC highlighting
-
-
-" ----- React / Redux ------------------------------------------
-" Plugin 'mxw/vim-jsx' "JSX syntax highlight
+" Plugin 'wavded/vim-stylus' "stylus
+" Plugin 'kchmck/vim-coffee-script' " coffee
+" Plugin 'evidens/vim-twig' " twig
+" Plugin 'jez/vim-c0' " C0 highlighting
+" Plugin 'jez/vim-ispc' " ISPC highlighting
 
 
 " ----- Status bar ------------------------------------------
@@ -46,10 +42,9 @@ Plugin 'editorconfig/editorconfig-vim'
 
 
 " ----- Snippets -----------------------------
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'honza/vim-snippets'
+" Plugin 'MarcWeber/vim-addon-mw-utils'
+" Plugin 'garbas/vim-snipmate'
+" Plugin 'honza/vim-snippets'
 
 
 " ----- Emmet ----------------------------------------------
@@ -68,32 +63,20 @@ Plugin 'tpope/vim-fugitive'
 
 
 " ----- JavaScript ----------------------------------------------
-" Plugin 'ternjs/tern_for_vim'
-Plugin 'othree/es.next.syntax.vim'
+Plugin 'othree/yajs.vim'
+" Plugin 'othree/es.next.syntax.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'othree/javascript-libraries-syntax.vim'
 
 
-" ----- TypeScript ----------------------------------------------
-Plugin 'leafgarland/typescript-vim'
-Plugin 'HerringtonDarkholme/yats.vim'
-Plugin 'Quramy/tsuquyomi'
-Plugin 'Shougo/vimproc.vim'
-Plugin 'vim-js-pretty-template'
+" ----- React / Redux ------------------------------------------
+Plugin 'mxw/vim-jsx' "JSX syntax highlight
 
 
 " ----- Ruby ----------------------------------------------
 " Plugin 'vim-ruby/vim-ruby'
 " Plugin 'tpope/vim-rails'
 " Plugin 'tpope/vim-bundler'
-
-
-" ----- Editor hacks -----------------------------------
-Plugin 'Raimondi/delimitMate' " closing quotes, brackets, etc
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat' " remmaping . to repeat all
-Plugin 'godlygeek/tabular'
-Plugin 'terryma/vim-multiple-cursors'
 
 
 " ----- Vim goodies :D -----------------------------------
@@ -104,6 +87,15 @@ Plugin 'tpope/vim-dispatch'
 Plugin 'christoomey/vim-tmux-navigator'
 " Make tmux look like vim-airline (read README for extra instructions)
 Plugin 'edkolev/tmuxline.vim'
+
+
+" ----- Utils ----------------------------------------------------------
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'godlygeek/tabular'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'tomtom/tlib_vim'
+Plugin 'tpope/vim-repeat' " remmaping . to repeat all
+Plugin 'tpope/vim-surround'
 
 
 call vundle#end()
@@ -152,8 +144,7 @@ augroup mySyntastic
   au!
   au FileType tex let b:syntastic_mode = "passive"
 augroup END
-
-let g:syntastic_typescript_checkers = ['tslint', 'tsc']
+let g:syntastic_javascript_checkers = ['eslint']
 
 
 " ----- Gitgutter -----
@@ -184,24 +175,18 @@ endif
 let g:indentLine_enabled = 1
 
 
-" ----- TypeScript YouCompleteMe --------
-if !exists("g:ycm_semantic_triggers")
-  let g:ycm_semantic_triggers = {}
-endif
-let g:ycm_semantic_triggers['typescript'] = ['.']
-
-
-" ----- JS-Pretty Template  --------
-autocmd FileType typescript JsPreTmpl html
-autocmd FileType typescript syn clear foldBraces
-
-
 " ----- JavaScript libraries syntax --------
-let g:used_javascript_libs = 'lodash,chai'
+let g:used_javascript_libs = 'chai,react'
+let g:javascript_plugin_jsdoc = 1
+
 
 " ----- Multiple Cursors --------
 "let g:multi_cursor_quit_key='Q'
 
 
 " ----- React / Redux --------
-" let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+
+
+" ----- Silver Searcher --------
+let g:ag_prg='ag --ignore node_modules'

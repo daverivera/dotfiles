@@ -46,7 +46,6 @@ if has("mac")
   source ~/.vim/autoload/mac/editor.vim
   source ~/.vim/autoload/mac/keymapping.vim
 elseif has("unix")
-  let g:syntastic_javascript_checkers = ['eslint']
   source ~/.vim/autoload/linux/plugins.vim
   source ~/.vim/autoload/linux/editor.vim
   source ~/.vim/autoload/linux/keymapping.vim
