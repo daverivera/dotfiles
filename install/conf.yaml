@@ -39,6 +39,14 @@
         path: tern-config
         force: true
 
+    # Mayus to CTRL
+    ~/.xmodmap:
+        path: xmodmap
+        force: true
+    ~/.zprofile:
+        path: zprofile
+        force: true
+
     # urxvt
     #~/.Xresources:
     #    path: Xresources
