@@ -23,7 +23,7 @@ nvm use 9.2.0
 
 case "$OSTYPE" in
   "linux-gnu")
-    path=(~/.nvm/versions/node/v7.3.0/bin /usr/local/sbin /usr/local/bin /usr/bin /opt/java/bin /opt/java/db/bin /opt/java/jre/bin /usr/bin/core_perl ~/.gem/ruby/2.4.0/bin $path)
+    path=(~/.nvm/versions/node/v7.3.0/bin /usr/local/sbin /usr/local/bin /usr/bin /opt/java/bin /opt/java/db/bin /opt/java/jre/bin /usr/bin/core_perl ~/.gem/ruby/2.5.0/bin $path)
     alias open=nemo
 
     alias xclip='xclip -selection clipboard'
