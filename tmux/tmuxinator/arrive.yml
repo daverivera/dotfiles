@@ -1,7 +1,10 @@
 # ~/.tmuxinator/asf-shared.yml
 
 name: ArriveLogistics
+# root: ~/Projects/CustomerSalesUI
 root: ~/Projects/TruckEntryUI
+# root: ~/Projects/CarrierSalesUI
+# root: ~/Projects/LoadUI
 
 windows:
   - coding:

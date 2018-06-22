@@ -54,8 +54,8 @@ Plugin 'mattn/emmet-vim'
 " ----- Fuzzy finder -----------------------------
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'FelikZ/ctrlp-py-matcher'
-Plugin 'rking/ag.vim'
-
+" Plugin 'rking/ag.vim'
+Plugin 'brookhong/ag.vim'
 
 " ----- Git ----------------------------------------------
 Plugin 'airblade/vim-gitgutter' " show new/update/delete lines
@@ -157,11 +157,13 @@ let g:airline#extensions#hunks#non_zero_only = 1
 " ----- CtrlP --------
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+
 " If ag is available use it as filename list generator instead of 'find'
 if executable("ag")
     set grepprg=ag\ --nogroup\ --nocolor
     let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --ignore ''.git'' --ignore ''.DS_Store'' --ignore ''node_modules'' --hidden -g ""'
 endif
+
 " Set delay to prevent extra search
 " let g:ctrlp_lazy_update = 350
 " Do not clear filenames cache, to improve CtrlP startup
@@ -189,4 +191,4 @@ let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
 
 " ----- Silver Searcher --------
-let g:ag_prg='ag --ignore node_modules'
+" let g:ag_prg='ag --ignore node_modules'
