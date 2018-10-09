@@ -5,6 +5,7 @@ name: ArriveLogistics
 root: ~/Projects/TruckEntryUI
 # root: ~/Projects/CarrierSalesUI
 # root: ~/Projects/LoadUI
+# root: ~/Projects/AccelerateShell
 
 windows:
   - coding:

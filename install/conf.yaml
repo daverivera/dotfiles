@@ -40,9 +40,9 @@
         force: true
 
     # Mayus to CTRL
-    ~/.xmodmap:
-        path: xmodmap
-        force: true
+    #~/.xmodmap:
+    #    path: xmodmap
+    #    force: true
     ~/.zprofile:
         path: zprofile
         force: true

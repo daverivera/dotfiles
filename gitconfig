@@ -46,6 +46,8 @@
 [core]
     editor = vim
     excludesfile = ~/.gitignore
+	autocrlf = false
+	eol = lf
 
 [diff]
     tool = fugitive
