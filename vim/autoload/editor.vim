@@ -1,3 +1,5 @@
+set lazyredraw     " redraw only when we need to
+
 " ----- Tab behaviour -----
 set expandtab      " tab to spaces
 set shiftround     " indent not rounded to shiftwidth
@@ -21,6 +23,7 @@ set list
 " Split configuration
 set splitbelow
 set splitright
+
 
 " vimdiff
 set diffopt+=vertical

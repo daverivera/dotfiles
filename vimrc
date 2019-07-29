@@ -25,6 +25,9 @@ set incsearch " do incremental searching
 set hlsearch  " highlight the search matches
 set mouse=a   " enable use of mouse
 
+" --- Load editor settings ---
+source ~/.vim/autoload/editor.vim
+
 " --- Setup vundle and load plugins ---
 source ~/.vim/autoload/plugins.vim
 
@@ -35,8 +38,6 @@ colorscheme Tomorrow-Night-Eighties
 set term=screen-256color
 syntax on
 
-" --- Load editor settings ---
-source ~/.vim/autoload/editor.vim
 
 " --- Load custom key mappings ---
 source ~/.vim/autoload/keymapping.vim

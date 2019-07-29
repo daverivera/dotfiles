@@ -1,0 +1,31 @@
+#~/.tmuxinator/asf-shared.yml
+
+name: FDB
+root: ~/Projects/fdb/fdbws/src/main/webapp
+
+windows:
+  - coding:
+      layout: d997,212x46,0,0[212x32,0,0,0,212x13,0,33{106x13,0,33,2,105x13,107,33,3}]
+      panes:
+        - vim:
+          - vim
+        - watch:
+          - yarn gulp watch
+        - console:
+          -
+  - server:
+      layout: 9ac3,212x46,0,0[212x23,0,0{106x23,0,0,4,105x23,107,0,6},212x22,0,24,5]
+      panes:
+        - Keycloak:
+          - cd ~/Projects/Software/keycloak-4.1.0.Final/bin
+          - ./standalone.sh
+        - MongoDB:
+          - brew services list
+        - Tomacat:
+          - cd ~/Projects/Software/apache-tomcat-8.5.41
+          - tail -f logs/fdbws.log
+  - java:
+      panes:
+        - neovim:
+          - cd ~/Projects/fdb/fdbws/
+          - nvim

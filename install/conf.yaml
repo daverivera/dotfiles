@@ -22,6 +22,12 @@
     ~/.vimrc:
         path: vimrc
         force: true
+    ~/.config/nvim/init.vim:
+        path: nvim/init.vim
+        force: true
+    ~/.config/nvim/config:
+        path: nvim/config/
+        force: true
 
     # Tmux
     ~/.tmux.conf:
