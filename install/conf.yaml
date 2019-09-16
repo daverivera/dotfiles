@@ -79,3 +79,6 @@
     -
         command: 'mkdir -p ~/.zsh_custom/themes'
         description: 'Creating Oh My ZSH custom directory'
+    -
+        command: 'mkdir -p ~/.config/nvim/undo'
+        description: 'Creating backup directories for NeoVim'

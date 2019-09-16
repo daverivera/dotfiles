@@ -8,7 +8,7 @@ windows:
       layout: d997,212x46,0,0[212x32,0,0,0,212x13,0,33{106x13,0,33,2,105x13,107,33,3}]
       panes:
         - vim:
-          - vim
+          - nvim
         - watch:
           - yarn gulp watch
         - console:
@@ -24,8 +24,3 @@ windows:
         - Tomacat:
           - cd ~/Projects/Software/apache-tomcat-8.5.41
           - tail -f logs/fdbws.log
-  - java:
-      panes:
-        - neovim:
-          - cd ~/Projects/fdb/fdbws/
-          - nvim
