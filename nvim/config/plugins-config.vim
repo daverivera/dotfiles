@@ -82,6 +82,7 @@ let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 let g:ctrlp_working_path_mode = 'ra' " use current git repo/file director with ctrl p
 let g:ctrlp_max_files=100000
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 " If ag is available use it as filename list generator instead of 'find'
 if executable("ag")
     set grepprg=ag\ --nogroup\ --nocolor
@@ -97,5 +98,21 @@ let g:airline_theme='deus'
 
 
 
-" ----- airline ----------------------------------------------
+" ----- colorscheme ----------------------------------------------
 colorscheme deus " awesome colorscheme
+
+
+
+" ----- nerdtree ----------------------------------------------
+let g:NERDTreeIgnore = ['^node_modules$']
+
+
+
+" ----- fugitive ----------------------------------------------
+let g:github_enterprise_urls = ['https://gitlab.tools.bol.com']
+
+
+
+
+" ----- vim-notes ----------------------------------------------
+let g:notes_directories = ['~/Documents/Notes']

@@ -18,7 +18,7 @@ source $ZSH/oh-my-zsh.sh
 
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 # nvm alias stable 4.2.6
-nvm use 9.2.0
+#nvm use 9.2.0
 
 
 case "$OSTYPE" in

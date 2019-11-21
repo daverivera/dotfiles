@@ -73,7 +73,7 @@ nnoremap <silent> <leader>c :let @/=''<CR>
 
 " ----- Folding -----
 " space open/closes folds
-nnoremap <space> za
+"nnoremap <space> za
 
 " allows cursor change in tmux mode
 if exists('$TMUX')

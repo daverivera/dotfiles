@@ -22,6 +22,8 @@
     ~/.vimrc:
         path: vimrc
         force: true
+
+    # NeoVim
     ~/.config/nvim/init.vim:
         path: nvim/init.vim
         force: true

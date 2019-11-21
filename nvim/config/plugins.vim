@@ -36,20 +36,27 @@ Plug 'FelikZ/ctrlp-py-matcher'
 " ----- Git ----------------------------------------------
 Plug 'airblade/vim-gitgutter' " show new/update/delete lines
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 
 
 
 " ----- Java ----------------------------------------------
 "Plug 'artur-shaik/vim-javacomplete2', {'for': 'java'} " Java-completion
 "Plug 'artur-shaik/vim-javacomplete2' " Java-completion
-Plug 'SirVer/ultisnips' " code snippet manager
-Plug 'majutsushi/tagbar' " ctags
+"Plug 'SirVer/ultisnips' " code snippet manager
+"Plug 'majutsushi/tagbar' " ctags
 
 
 
-" ----- Java ----------------------------------------------
- Plug 'mxw/vim-jsx'
- Plug 'pangloss/vim-javascript'
+" ----- Javascript ----------------------------------------------
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
+
+
+
+" ----- Typescript ----------------------------------------------
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 
 
 
@@ -61,6 +68,7 @@ Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-repeat' " remmaping . to repeat all
 Plug 'tpope/vim-surround'
 Plug 'rafi/awesome-vim-colorschemes' " Vim color schemes
+
 
 " Initialize plugin system
 call plug#end()
