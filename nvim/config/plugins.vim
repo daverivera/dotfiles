@@ -11,7 +11,10 @@ Plug 'editorconfig/editorconfig-vim'
 " Plug 'Valloric/YouCompleteMe'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Code completion
 Plug 'w0rp/ale' " Code Linter for almost every language
-
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['typescript'] }
+Plug 'mattn/emmet-vim'
 
 
 " ----- Status bar ------------------------------------------
@@ -49,8 +52,9 @@ Plug 'tpope/vim-rhubarb'
 
 
 " ----- Javascript ----------------------------------------------
-Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'jxnblk/vim-mdx-js'
 
 
 

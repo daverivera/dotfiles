@@ -60,7 +60,8 @@ let g:ale_loclist = 0
 let g:ale_linters = {
       \  'cs':['syntax', 'semantic', 'issues'],
       \  'python': ['pylint'],
-      \  'java': ['javac']
+      \  'java': ['javac'],
+      \  'typescript': ['eslint'],
       \ }
 
 
@@ -95,11 +96,13 @@ endif
 let g:airline#extensions#tabline#enabled = 1 " enable smarter tab line to display opened buffers
 let g:airline#extensions#tabline#formatter = 'unique_tail' " filename formatterl
 let g:airline_theme='deus'
+"let g:airline_theme='onedark'
 
 
 
 " ----- colorscheme ----------------------------------------------
 colorscheme deus " awesome colorscheme
+"set background=dark " for the dark version with one
 
 
 
@@ -110,7 +113,6 @@ let g:NERDTreeIgnore = ['^node_modules$']
 
 " ----- fugitive ----------------------------------------------
 let g:github_enterprise_urls = ['https://gitlab.tools.bol.com']
-
 
 
 
