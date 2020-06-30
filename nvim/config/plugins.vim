@@ -11,7 +11,10 @@ Plug 'editorconfig/editorconfig-vim'
 " Plug 'Valloric/YouCompleteMe'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Code completion
 Plug 'w0rp/ale' " Code Linter for almost every language
-
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['typescript'] }
+Plug 'mattn/emmet-vim'
 
 
 " ----- Status bar ------------------------------------------
@@ -36,20 +39,28 @@ Plug 'FelikZ/ctrlp-py-matcher'
 " ----- Git ----------------------------------------------
 Plug 'airblade/vim-gitgutter' " show new/update/delete lines
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 
 
 
 " ----- Java ----------------------------------------------
 "Plug 'artur-shaik/vim-javacomplete2', {'for': 'java'} " Java-completion
 "Plug 'artur-shaik/vim-javacomplete2' " Java-completion
-Plug 'SirVer/ultisnips' " code snippet manager
-Plug 'majutsushi/tagbar' " ctags
+"Plug 'SirVer/ultisnips' " code snippet manager
+"Plug 'majutsushi/tagbar' " ctags
 
 
 
-" ----- Java ----------------------------------------------
- Plug 'mxw/vim-jsx'
- Plug 'pangloss/vim-javascript'
+" ----- Javascript ----------------------------------------------
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'jxnblk/vim-mdx-js'
+
+
+
+" ----- Typescript ----------------------------------------------
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 
 
 
@@ -61,6 +72,7 @@ Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-repeat' " remmaping . to repeat all
 Plug 'tpope/vim-surround'
 Plug 'rafi/awesome-vim-colorschemes' " Vim color schemes
+
 
 " Initialize plugin system
 call plug#end()

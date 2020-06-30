@@ -31,9 +31,10 @@ set hlsearch        " highlight matches
 
 
 " ----- Folding -----
-set foldenable          " enable folding
-set foldlevelstart=10   " open most folds by default
-set foldmethod=indent   " fold based on indent level
+set nofoldenable         " disable folding
+"set foldenable          " enable folding
+"set foldlevelstart=10   " open most folds by default
+"set foldmethod=indent   " fold based on indent level
 
 
 

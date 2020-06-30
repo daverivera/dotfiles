@@ -1,0 +1,32 @@
+#~/.tmuxinator/asf-shared.yml
+
+name: PUIK
+root: ~/Projects/current/puik/
+
+
+windows:
+  - coding:
+      # layout: d997,212x46,0,0[212x32,0,0,0,212x13,0,33{106x13,0,33,2,105x13,107,33,3}]
+      layout: 205d,364x94,0,0[364x56,0,0,0,364x37,0,57{122x37,0,57,1,120x37,123,57,6,120x37,244,57,7}]
+      panes:
+        - vim:
+          - nvim
+        - stencil:
+          - cd components
+          - yarn start.stencil
+        - storybook:
+          - cd components
+          - yarn start.storybook
+        - git:
+          - git status
+  #- server:
+      #layout: 9ac3,212x46,0,0[212x23,0,0{106x23,0,0,4,105x23,107,0,6},212x22,0,24,5]
+      #panes:
+        #- Keycloak:
+          #- cd ~/Projects/Software/keycloak-4.1.0.Final/bin
+          #- ./standalone.sh
+        #- MongoDB:
+          #- brew services list
+        #- Tomacat:
+          #- cd ~/Projects/Software/apache-tomcat-8.5.41
+          #- tail -f logs/fdbws.log
