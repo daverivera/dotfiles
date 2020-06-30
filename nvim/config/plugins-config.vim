@@ -1,7 +1,7 @@
 " ----- deoplete ----------------------------------------------
 filetype plugin indent on  
 set omnifunc=syntaxcomplete#Complete
-autocmd FileType java setlocal omnifunc=javacomplete#Complete
+"autocmd FileType java setlocal omnifunc=javacomplete#Complete
 let g:deoplete#enable_at_startup = 1
 "let g:deoplete#omni_patterns.java = '[^. *\t]\.\w*'
 let g:deoplete#auto_completion_start_length = 2
@@ -9,6 +9,9 @@ let g:deoplete#sources = {}
 let g:deoplete#sources._ = []
 let g:deoplete#file#enable_buffer_path = 1
 "let g:deoplete#omni_patterns = {}
+call deoplete#custom#option('sources', {
+\ '_': ['ale'],
+\})
 
 "" Don't forget to start deoplete let g:deoplete#enable_at_startup = 1 " Less spam let g:deoplete#auto_complete_start_length = 2
 "let g:deoplete#enable_at_startup = 1
@@ -56,13 +59,15 @@ let g:ale_sign_warning = '⚠⚠'
 " Comes down to personal preferance.
 let g:ale_open_list = 0
 let g:ale_loclist = 0
-" Setup compilers for languages
+
+" Setup compilers for languages / Linters
 let g:ale_linters = {
-      \  'cs':['syntax', 'semantic', 'issues'],
-      \  'python': ['pylint'],
-      \  'java': ['javac'],
-      \  'typescript': ['eslint'],
-      \ }
+    \  'javascript': ['eslint'],
+    \  'typescript': ['tsserver', 'tslint'],
+    \  'cs':['syntax', 'semantic', 'issues'],
+    \  'python': ['pylint'],
+    \  'java': ['javac']
+\ }
 
 
 
@@ -96,25 +101,8 @@ endif
 let g:airline#extensions#tabline#enabled = 1 " enable smarter tab line to display opened buffers
 let g:airline#extensions#tabline#formatter = 'unique_tail' " filename formatterl
 let g:airline_theme='deus'
-"let g:airline_theme='onedark'
 
 
 
 " ----- colorscheme ----------------------------------------------
 colorscheme deus " awesome colorscheme
-"set background=dark " for the dark version with one
-
-
-
-" ----- nerdtree ----------------------------------------------
-let g:NERDTreeIgnore = ['^node_modules$']
-
-
-
-" ----- fugitive ----------------------------------------------
-let g:github_enterprise_urls = ['https://gitlab.tools.bol.com']
-
-
-
-" ----- vim-notes ----------------------------------------------
-let g:notes_directories = ['~/Documents/Notes']

@@ -10,11 +10,8 @@ Plug 'scrooloose/nerdcommenter' " comment lines
 Plug 'editorconfig/editorconfig-vim'
 " Plug 'Valloric/YouCompleteMe'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Code completion
-Plug 'w0rp/ale' " Code Linter for almost every language
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'for': ['typescript'] }
-Plug 'mattn/emmet-vim'
+Plug 'dense-analysis/ale' " Code Linter for almost every language
+
 
 
 " ----- Status bar ------------------------------------------
@@ -46,21 +43,34 @@ Plug 'tpope/vim-rhubarb'
 " ----- Java ----------------------------------------------
 "Plug 'artur-shaik/vim-javacomplete2', {'for': 'java'} " Java-completion
 "Plug 'artur-shaik/vim-javacomplete2' " Java-completion
-"Plug 'SirVer/ultisnips' " code snippet manager
-"Plug 'majutsushi/tagbar' " ctags
+Plug 'SirVer/ultisnips' " code snippet manager
+Plug 'majutsushi/tagbar' " ctags
 
 
 
-" ----- Javascript ----------------------------------------------
-Plug 'pangloss/vim-javascript'
+" ----- Javascript / Web ----------------------------------------------
+ Plug 'pangloss/vim-javascript'
+ Plug 'mattn/emmet-vim'
+
+
+
+" ----- React ----------------------------------------------
 Plug 'mxw/vim-jsx'
-Plug 'jxnblk/vim-mdx-js'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 
 
-" ----- Typescript ----------------------------------------------
-Plug 'HerringtonDarkholme/yats.vim'
+" ----- TypeScript ----------------------------------------------
+Plug 'leafgarland/typescript-vim' " Typescript Highlighting
+"Plug 'ianks/vim-tsx' " React JSX Highlighting
+"Plug 'HerringtonDarkholme/yats.vim'
+"Plug 'Shougo/denite.nvim'
+
+Plug 'peitalin/vim-jsx-typescript' " React JSX Highlighting
 Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+"Plug 'Quramy/tsuquyomi'
+"Plug 'Shougo/vimproc.vim'
+"Plug 'vim-js-pretty-template'
 
 
 

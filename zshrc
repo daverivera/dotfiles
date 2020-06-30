@@ -31,7 +31,9 @@ case "$OSTYPE" in
     ;;
 
   "darwin"*)
-    path=(~/.nvm/versions/node/v4.2.6/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin $path)
+    #path=(/usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/opt/ruby/bin /Users/daverivera/.gem/ruby/2.3.0/bin $path)
+    #path=(/usr/local/bin /usr/local/opt/ruby/bin /usr/bin /bin /usr/sbin /sbin /Users/daverivera/.gem/ruby/2.6.0/bin  $path)
+    path=(/usr/local/bin /Users/daverivera/.gem/ruby/2.6.0/bin /usr/bin /bin /usr/sbin /sbin $path)
     alias restart='sudo shutdown -r now'
 
     # Enables bluetooth
@@ -66,3 +68,19 @@ alias mux='tmuxinator'
 
 export PATH="$HOME/.yarn/bin:$PATH"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/usr/local/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+        . "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh"
+    else
+        export PATH="/usr/local/Caskroom/miniconda/base/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
