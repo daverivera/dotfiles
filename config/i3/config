@@ -27,7 +27,8 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+#bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec termite
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -89,6 +90,12 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+#set $workspace1 "1: "
+#set $workspace2 "2: "
+#set $workspace4 "4: "
+#set $workspace8 "8: "
+#set $workspace9 "9: "
+
 # switch to workspace
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
@@ -101,17 +108,27 @@ bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
+# Applications
+assign [class="Termite"] workspace 1
+assign [class="firefox"] workspace 2
+assign [class="Steam"] workspace 4
+assign [class="Slack"] workspace 8
+#assign [class="Teams"] $workspace8
+assign [class="Spotify"] workspace 10 
+
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+#bindsym $mod+Shift+1 move container to workspace $workspace1:IM;workspace 1:IM;focus
+bindsym $mod+Shift+1 move container to workspace 1; workspace 1
+bindsym $mod+Shift+2 move container to workspace 2; workspace 2
+bindsym $mod+Shift+3 move container to workspace 3; workspace 3
+bindsym $mod+Shift+4 move container to workspace 4; workspace 4
+bindsym $mod+Shift+5 move container to workspace 5; workspace 5
+bindsym $mod+Shift+6 move container to workspace 6; workspace 6
+bindsym $mod+Shift+7 move container to workspace 7; workspace 7
+bindsym $mod+Shift+8 move container to workspace 8; workspace 8
+bindsym $mod+Shift+9 move container to workspace 9; workspace 9
+bindsym $mod+Shift+0 move container to workspace 10; workspace 10
+
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -148,6 +165,79 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        status_command i3status
-}
+#bar {
+        #status_command i3status --config ~/.config/i3status/config
+        #position top
+        ##status_command i3status
+#}
+
+# Desktop styling
+gaps inner 15
+focus_follows_mouse no
+
+
+# Windows styling
+for_window [class="^.*"] border pixel 1
+client.focused #4c7899 #285577 #888888 #808080 #808080
+
+#####################################################################################################################
+#################                          startup applications                                     #################
+#####################################################################################################################
+
+# Autostart applications
+#exec volnoti &
+exec nitrogen --restore &
+exec --no-startup-id xfce4-power-manager &
+
+# Transparency / Transitions
+exec compton -f &
+
+# Polybar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+#####################################################################################################################
+#################                          tray icons                                               #################
+#####################################################################################################################
+
+# Volume trayicon
+exec --no-startup-id volumeicon
+
+# Network trayicon
+exec --no-startup-id nm-applet
+
+# Updater
+exec --no-startup-id pamac-tray
+
+# Bluetooth
+#exec --no-startup-id blueberry-tray
+
+# Clip manager
+exec --no-startup-id xfce4-clipman
+
+# Autolock
+exec --no-startup-id xautolock -time 10 -locker "betterlockscreen -l dim"
+
+#####################################################################################################################
+#################                          custom binding                                           #################
+#####################################################################################################################
+
+# Notifications
+exec --no-startup-id dunst
+
+# Lock screen
+#bindsym $mod+shift+l exec i3lock
+#bindsym $mod+shift+l exec betterlockscreen -l
+
+# Screenshots
+bindsym Print exec gnome-screenshot -ia
+
+# Volume control keys
+bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer set Master 2%+ && volnoti-show $(amixer get Master | grep -Po '[0-9]+(?=%)' | head -1)"
+bindsym XF86AudioLowerVolume exec --no-startup-id "amixer set Master 2%- && volnoti-show $(amixer get Master | grep -Po '[0-9]+(?=%)' | head -1)"
+bindsym XF86AudioMute exec --no-startup-id "amixer set Master toggle && if amixer get Master | grep -Fq '[off]'; then volnoti-show -m; else volnoti-show $(amixer get Master | grep -Po '[0-9]+(?=%)' | head -1); fi"
+
+# Music control keys
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous

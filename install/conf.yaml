@@ -1,69 +1,76 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+
 - clean: ['~']
 
 - link:
     # ZSH
-    ~/.zshrc:
-        path: zshrc
-        force: true
-    ~/.zsh_custom: zsh_custom/
-
-    # Oh-my-zsh
+    ~/.zshrc: zshrc
     ~/.oh-my-zsh: oh-my-zsh/
+    ~/.zsh_custom: 
+        blob: true 
+        create: true
+        path: zsh_custom/
+
 
     # Git
-    ~/.gitconfig:
-      path: gitconfig
-      force: true
+    ~/.gitconfig: gitconfig
 
     # Vim
-    ~/.vim:
-        path: vim/
-        force: true
-    ~/.vimrc:
-        path: vimrc
-        force: true
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
 
     # NeoVim
-    ~/.config/nvim/init.vim:
-        path: nvim/init.vim
-        force: true
-    ~/.config/nvim/config:
-        path: nvim/config/
-        force: true
+    ~/.config/nvim/init.vim: nvim/init.vim
+    ~/.config/nvim/config: nvim/config/
 
     # Tmux
-    ~/.tmux.conf:
-        path: tmux/tmux
-        force: true
-    ~/.tmuxinator.zsh:
-        path: tmux/tmuxinator.zsh
-        force: true
-    ~/.tmuxinator:
-        path: tmux/tmuxinator/
-        force: true
+    ~/.tmux.conf: tmux/tmux
+    ~/.tmuxinator.zsh: tmux/tmuxinator.zsh
+    # ~/.tmuxinator:
+      #path: tmux/tmuxinator/
+      #force: true
 
     # Javascript
-    ~/.tern-config.conf:
-        path: tern-config
-        force: true
+    ~/.tern-config.conf: tern-config
 
-    # Mayus to CTRL
-    #~/.xmodmap:
-    #    path: xmodmap
+    # Mayus to CTRL - Depends: install xorg-xmodmap
+    ~/.Xmodmap: Xmodmap
+
+    #~/.zprofile:
+    #    path: zprofile
     #    force: true
-    ~/.zprofile:
-        path: zprofile
-        force: true
 
     # urxvt
     #~/.Xresources:
     #    path: Xresources
     #    force: true
+    
+    # Termite
+    ~/.config/termite/config: config/termite/config
 
     # i3wm
-    #~/.config/i3/config:
-    #    path: config/i3/config
-    #    force: true
+    ~/.config/i3/config: config/i3/config
+    ~/.config/i3status/config: config/i3status/config
+
+    # Polybar 
+    ~/.config/polybar:
+        glob: true
+        create: true
+        path: config/polybar
+        
+    # Rofi
+    ~/.config/rofi:
+        glob: true
+        create: true
+        path: config/rofi
+        #relink: true
+
+
+    # Dunst
+    ~/.config/dunst/dunstrc: config/dunst/dunstrc
 
 
 - shell:
@@ -75,15 +82,18 @@
     -
         command: 'mkdir -p ~/.vim/backup ~/.vim/swap ~/.vim/undo'
         description: 'Creating backup directories for Vim'
-    -
-        command: 'vim +PluginClean +PluginInstall +qall'
-        description: 'Installing Vim Vundle managed plugins'
-    -
-        command: 'mkdir -p ~/.zsh_custom/themes'
-        description: 'Creating Oh My ZSH custom directory'
+    #-
+        #command: 'vim +PluginClean +PluginInstall +qall'
+        #description: 'Installing Vim Vundle managed plugins'
+    #-
+        #command: 'mkdir -p ~/.zsh_custom/themes'
+        #description: 'Creating Oh My ZSH custom directory'
     -
         command: 'mkdir -p ~/.config/nvim/undo'
         description: 'Creating backup directories for NeoVim'
+    #-
+        #command: 'mkdir -p ~/.config/i3status'
+        #description: 'Creating config folder for i3status'
     -
         command: 'pip3 install neovim --user'
         description: 'Installing Python neovim module'
