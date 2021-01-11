@@ -43,6 +43,7 @@ case "$OSTYPE" in
     ;;
 esac
 
+export PATH=$(brew --prefix)/bin:$(brew --prefix)/sbin:$PATH
 
 # Add all --untracked and commit
 alias gaac='gaa && gc'
@@ -84,3 +85,9 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/daverivera/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/daverivera/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/daverivera/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/daverivera/google-cloud-sdk/completion.zsh.inc'; fi
