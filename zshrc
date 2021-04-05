@@ -18,13 +18,15 @@ plugins=(git archlinux)
 source $ZSH/oh-my-zsh.sh
 
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+source /usr/share/nvm/init-nvm.sh
 # nvm alias stable 4.2.6
 #nvm use 9.2.0
 
 
 case "$OSTYPE" in
   "linux-gnu")
-    path=(~/.nvm/versions/node/v9.2.0/bin /usr/local/sbin /usr/local/bin /usr/bin /opt/java/bin /opt/java/db/bin /opt/java/jre/bin /usr/bin/core_perl ~/.gem/ruby/2.5.0/bin $path)
+    #path=(~/.nvm/versions/node/v9.2.0/bin /usr/local/sbin /usr/local/bin /usr/bin /opt/java/bin /opt/java/db/bin /opt/java/jre/bin /usr/bin/core_perl ~/.gem/ruby/2.5.0/bin $path)
+    path=(/usr/local/sbin /usr/local/bin /usr/bin /opt/java/bin /opt/java/db/bin /opt/java/jre/bin /usr/bin/core_perl ~/.gem/ruby/2.5.0/bin $path)
     alias open=nemo
 
     alias xclip='xclip -selection clipboard'
