@@ -26,10 +26,10 @@ set hlsearch  " highlight the search matches
 set mouse=a   " enable use of mouse
 
 " --- Load editor settings ---
-source ~/.vim/autoload/editor.vim
+"source ~/.vim/autoload/editor.vim
 
 " --- Setup vundle and load plugins ---
-source ~/.vim/autoload/plugins.vim
+"source ~/.vim/autoload/plugins.vim
 
 " --- Color scheme ---
 set background=dark
@@ -40,16 +40,16 @@ syntax on
 
 
 " --- Load custom key mappings ---
-source ~/.vim/autoload/keymapping.vim
+"source ~/.vim/autoload/keymapping.vim
 
-if has("mac")
-  source ~/.vim/autoload/mac/plugins.vim
-  source ~/.vim/autoload/mac/editor.vim
-  source ~/.vim/autoload/mac/keymapping.vim
-elseif has("unix")
-  source ~/.vim/autoload/linux/plugins.vim
-  source ~/.vim/autoload/linux/editor.vim
-  source ~/.vim/autoload/linux/keymapping.vim
-endif
+"if has("mac")
+  "source ~/.vim/autoload/mac/plugins.vim
+  "source ~/.vim/autoload/mac/editor.vim
+  "source ~/.vim/autoload/mac/keymapping.vim
+"elseif has("unix")
+  "source ~/.vim/autoload/linux/plugins.vim
+  "source ~/.vim/autoload/linux/editor.vim
+  "source ~/.vim/autoload/linux/keymapping.vim
+"endif
 
 set conceallevel=0

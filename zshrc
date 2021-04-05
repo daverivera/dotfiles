@@ -5,7 +5,8 @@ export EDITOR=vim
 export NVM_DIR=~/.nvm
 
 # Set name of the theme to load.
-ZSH_THEME="amuse"
+#ZSH_THEME="amuse"
+ZSH_THEME="af-magic"
 
 # Would you like to use another custom folder than $ZSH/custom?
 ZSH_CUSTOM=$HOME/.zsh_custom
@@ -43,7 +44,8 @@ case "$OSTYPE" in
     ;;
 esac
 
-export PATH=$(brew --prefix)/bin:$(brew --prefix)/sbin:$PATH
+#export PATH=$(brew --prefix)/bin:$(brew --prefix)/sbin:$PATH
+#export PATH=$(brew --prefix)/bin:$(brew --prefix)/sbin:$PATH
 
 # Add all --untracked and commit
 alias gaac='gaa && gc'
