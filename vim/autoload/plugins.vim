@@ -86,7 +86,7 @@ Plugin 'tpope/vim-dispatch'
 " ----- tmux ----------------------------------------------------------
 Plugin 'christoomey/vim-tmux-navigator'
 " Make tmux look like vim-airline (read README for extra instructions)
-Plugin 'edkolev/tmuxline.vim'
+" Plugin 'edkolev/tmuxline.vim'
 
 
 " ----- Utils ----------------------------------------------------------
