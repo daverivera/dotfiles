@@ -45,6 +45,7 @@ case "$OSTYPE" in
 esac
 
 #export PATH=$(brew --prefix)/bin:$(brew --prefix)/sbin:$PATH
+#export PATH=$(brew --prefix)/bin:$(brew --prefix)/sbin:$PATH
 
 # Add all --untracked and commit
 alias gaac='gaa && gc'
