@@ -81,7 +81,7 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 "Plug 'Shougo/vimproc.vim'
 "Plug 'vim-js-pretty-template'
 "Plug 'pangloss/vim-javascript'    " JavaScript support
-"Plug 'leafgarland/typescript-vim'  " TypeScript syntax
+Plug 'leafgarland/typescript-vim'  " TypeScript syntax
 Plug 'peitalin/vim-jsx-typescript' " TypeScript syntax
 Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
 Plug 'jparise/vim-graphql'        " GraphQL syntax

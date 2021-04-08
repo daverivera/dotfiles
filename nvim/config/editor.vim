@@ -41,4 +41,4 @@ set nofoldenable         " disable folding
 
 " ----- Copy-Paste -----
 "set clipboard=unnamed " Yank and paste into clipboard
-set clipboard=unnamed " Yank and paste into clipboard
+set clipboard=unnamedplus " Yank and paste into clipboard
