@@ -186,14 +186,17 @@ client.focused #4c7899 #285577 #888888 #808080 #808080
 
 # Autostart applications
 #exec volnoti &
-exec nitrogen --restore &
-exec --no-startup-id xfce4-power-manager &
+#exec nitrogen --restore &
+#exec --no-startup-id xfce4-power-manager &
 
 # Transparency / Transitions
 exec compton -f &
 
 # Polybar
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh &
+
+# Second monitor
+exec xrandr --output DP-0 --auto --output HDMI-0 --auto --left-of DP-0 &
 
 #####################################################################################################################
 #################                          tray icons                                               #################
@@ -219,13 +222,12 @@ exec --no-startup-id xautolock -time 10 -locker "betterlockscreen -l dim"
 
 #####################################################################################################################
 #################                          custom binding                                           #################
-#####################################################################################################################
+####################################################################################################################
 
 # Notifications
 exec --no-startup-id dunst
 
 # Lock screen
-#bindsym $mod+shift+l exec i3lock
 #bindsym $mod+shift+l exec betterlockscreen -l
 
 # Screenshots
@@ -241,3 +243,10 @@ bindsym XF86AudioPlay exec playerctl play
 bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
+
+# Firefox
+bindsym $mod+shift+f exec firefox
+
+# Move workspaces between monitors
+bindsym $mod+control+l move workspace to output DP-0
+bindsym $mod+control+h move workspace to output HDMI-0

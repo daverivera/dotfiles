@@ -90,6 +90,11 @@ scroll-down = i3wm-wsnext
 cursor-click = pointer
 cursor-scroll = cursor
 
+;[bar/HDMI]
+;inherit = bar/bar
+;monitor = ${env:MONITOR:HDMI-0}
+;monitor = HDMI-0
+
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...%
