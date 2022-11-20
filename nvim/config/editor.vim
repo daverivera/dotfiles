@@ -42,3 +42,9 @@ set nofoldenable         " disable folding
 " ----- Copy-Paste -----
 "set clipboard=unnamed " Yank and paste into clipboard
 set clipboard=unnamedplus " Yank and paste into clipboard
+
+
+
+" ----- File management -----
+set autoread " Reload files when they change
+au FocusGained,BufEnter * :checktime " Reload file when focus on the buffer is gained

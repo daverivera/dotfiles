@@ -200,5 +200,12 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 
 
+" ----- Vue filetype ----------------------------------------------
+autocmd BufNewFile,BufRead *.vue set filetype=vue
+
+" ----- Rust filetype ----------------------------------------------
+filetype plugin indent on
+
+
 " ----- NERDTree ----------------------------------------------
 let g:NERDTreeIgnore = ['^node_modules$']

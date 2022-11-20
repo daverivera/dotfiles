@@ -69,6 +69,18 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 
 
+" ----- Vue ----------------------------------------------
+Plug 'posva/vim-vue'
+Plug 'Quramy/tsuquyomi'
+Plug 'Quramy/tsuquyomi-vue'
+
+
+" ----- Rust ----------------------------------------------
+Plug 'rust-lang/rust.vim'
+
+
+
+
 " ----- TypeScript ----------------------------------------------
 "Plug 'leafgarland/typescript-vim' " Typescript Highlighting
 "Plug 'ianks/vim-tsx' " React JSX Highlighting
